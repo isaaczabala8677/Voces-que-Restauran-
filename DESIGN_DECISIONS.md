@@ -1,546 +1,1330 @@
-# Registro de decisiones de diseño
+# Decisiones de diseño
 
 ## Propósito
 
-Este documento registra decisiones pedagógicas, éticas, funcionales y técnicas de **Voces que Restauran**.
+Este documento registra las decisiones estratégicas, pedagógicas, editoriales, técnicas, éticas y de experiencia de usuario de **Voces que Restauran**.
 
-Su objetivo es conservar:
+Su función es:
 
-- qué se decidió;
-- por qué se decidió;
-- qué alternativas se consideraron;
-- qué consecuencias tiene;
-- cuándo debe revisarse.
-
-Las decisiones no deben modificarse silenciosamente.
+- mantener coherencia;
+- evitar decisiones contradictorias;
+- conservar el razonamiento del proyecto;
+- orientar el desarrollo;
+- facilitar revisiones;
+- registrar decisiones reemplazadas;
+- impedir que funciones futuras se implementen sin aprobación.
 
 ---
 
-## Formato para nuevas decisiones
+## Estados de decisión
+
+Cada decisión puede tener uno de estos estados:
 
 ```text
-ID:
-
-Fecha:
-
-Estado:
-Propuesta | Aceptada | Reemplazada | Descartada
-
-Decisión:
-
-Contexto:
-
-Razón:
-
-Alternativas consideradas:
-
-Consecuencias:
-
-Documentos relacionados:
-
-Condición de revisión:
+Propuesta
+Aceptada
+En revisión
+Reemplazada
+Descartada
+Pospuesta
 ```
 
 ---
 
-# Decisiones vigentes
+## Categorías
 
-## DD-001 — Construir primero la unidad didáctica
+Las decisiones se identifican mediante estos prefijos:
+
+```text
+STR — Estratégica
+PED — Pedagógica
+CNT — Contenido
+UX  — Experiencia de usuario
+VIS — Diseño visual
+TEC — Técnica
+DAT — Datos
+ACC — Accesibilidad
+PRI — Privacidad
+AI  — Inteligencia artificial
+DEP — Despliegue
+DOC — Documentación
+```
+
+---
+
+# Decisiones estratégicas
+
+## STR-001 — El producto actual es una unidad didáctica apoyada por un recurso web
 
 **Estado:** Aceptada
 
 ### Decisión
 
-Antes de desarrollar una aplicación institucional, se documentará e implementará una unidad didáctica de cocreación.
+El producto actual de **Voces que Restauran** es:
+
+> una unidad didáctica interdisciplinaria apoyada por un recurso web estático, accesible, responsive y sin recopilación de datos personales.
 
 ### Razón
 
-Construir primero una aplicación implicaría asumir necesidades y funciones sin participación suficiente de los estudiantes.
+El proyecto busca acompañar un proceso pedagógico de cocreación y no construir de inmediato una plataforma institucional.
 
-### Consecuencias
+### Implicaciones
 
-- la base de conocimiento se completa antes del desarrollo;
-- los estudiantes participan en la definición de necesidades;
-- los prototipos funcionan como insumos;
-- la futura aplicación requerirá otra fase.
+- la unidad didáctica tiene prioridad;
+- el recurso web apoya la implementación;
+- el sitio no debe presentarse como una aplicación terminada;
+- las decisiones técnicas deben responder a necesidades pedagógicas.
 
 ---
 
-## DD-002 — La aplicación futura no está definida
+## STR-002 — La aplicación futura no se construirá antes de la implementación pedagógica
 
 **Estado:** Aceptada
 
 ### Decisión
 
-No se establecerán anticipadamente las funciones definitivas de una aplicación.
+La posible aplicación futura solo podrá evaluarse después de:
+
+1. implementar la unidad;
+2. observar la experiencia;
+3. analizar los prototipos estudiantiles;
+4. identificar necesidades recurrentes;
+5. revisar riesgos;
+6. definir responsabilidades institucionales;
+7. analizar requisitos jurídicos, técnicos y de sostenibilidad.
 
 ### Razón
 
-Las funciones deben responder a:
+Construir una aplicación antes de comprender las necesidades reales contradice el enfoque de cocreación.
 
-- resultados de implementación;
-- necesidades recurrentes;
-- aportes estudiantiles;
-- revisión docente;
-- criterios institucionales;
-- análisis técnico y ético.
+### Implicaciones
 
-### Consecuencias
+```text
+future-app/
+```
 
-Los productos actuales se identifican como prototipos.
+se utilizará únicamente para:
+
+- conceptos;
+- escenarios;
+- requisitos;
+- recomendaciones;
+- riesgos;
+- posibilidades futuras.
 
 ---
 
-## DD-003 — Recurso web estático
+## STR-003 — El recurso web será independiente del proyecto doctoral Caukara
 
 **Estado:** Aceptada
 
 ### Decisión
 
-La primera versión del recurso será estática.
+**Voces que Restauran** corresponde al producto de transferencia de la experiencia ICT Korea 2026.
 
-### Tecnologías previstas
-
-- HTML;
-- CSS;
-- JavaScript;
-- JSON local;
-- GitHub Pages.
+No forma parte de la investigación doctoral sobre Caukara.
 
 ### Razón
 
-Una arquitectura estática:
-
-- reduce riesgos;
-- facilita mantenimiento;
-- evita recopilar información;
-- permite despliegue sencillo;
-- favorece transparencia.
+Ambos proyectos tienen propósitos, poblaciones, marcos y productos distintos.
 
 ---
 
-## DD-004 — No almacenar datos estudiantiles
+# Decisiones pedagógicas
+
+## PED-001 — La unidad tendrá ocho semanas, dieciséis sesiones y treinta y dos horas
 
 **Estado:** Aceptada
 
-### Decisión
+### Estructura
 
-La primera fase no almacenará respuestas, relatos, perfiles ni interacciones de estudiantes.
+| Momento | Horas | Sesiones |
+|---|---:|---:|
+| Inspirar y conectar | 4 | 2 |
+| Comprender | 8 | 4 |
+| Aplicar y crear | 12 | 6 |
+| Compartir y transformar | 8 | 4 |
 
-### Consecuencias
+### Implicaciones
 
-No se utilizarán:
+La documentación, el JSON y la interfaz deben mantener:
 
-- bases de datos;
-- cuentas;
-- autenticación;
-- almacenamiento local;
-- formularios con envío;
-- analítica de usuarios.
+```text
+4 momentos
+16 sesiones
+32 horas
+```
 
 ---
 
-## DD-005 — Utilizar casos ficticios
+## PED-002 — Se articularán tres áreas
 
 **Estado:** Aceptada
 
-### Decisión
+### Áreas
 
-Las actividades sobre convivencia utilizarán principalmente casos ficticios.
+- Inglés;
+- Ética, convivencia y ciencias sociales;
+- Tecnología e informática.
 
 ### Razón
 
-Esto permite desarrollar análisis sin convertir el aula en un espacio de exposición de conflictos reales.
-
-### Excepción
-
-Si aparece espontáneamente una situación real que implique riesgo o vulneración, debe atenderse mediante las rutas institucionales y fuera de la dinámica pública.
+La unidad debe mantener una integración interdisciplinaria manejable.
 
 ---
 
-## DD-006 — Máximo tres áreas
+## PED-003 — La población principal será de 11 a 14 años
 
 **Estado:** Aceptada
 
-### Decisión
+### Población
 
-La unidad articula:
+Estudiantes de básica secundaria, especialmente:
 
-- inglés;
-- ética, convivencia y ciencias sociales;
-- tecnología e informática.
+- sexto;
+- séptimo;
+- octavo.
 
-### Razón
+### Nivel de inglés
 
-Limitar el número de áreas favorece:
+```text
+A1–A2
+```
 
-- coherencia;
-- viabilidad;
-- claridad en responsabilidades;
-- integración real.
+### Implicaciones
 
----
+El contenido debe incluir:
 
-## DD-007 — Duración de 32 horas
-
-**Estado:** Aceptada
-
-### Decisión
-
-La unidad tendrá:
-
-- 8 semanas;
-- 16 sesiones;
-- 2 horas por sesión;
-- 32 horas.
-
-### Distribución
-
-| Momento | Horas |
-|---|---:|
-| Inspirar y conectar | 4 |
-| Comprender | 8 |
-| Aplicar y crear | 12 |
-| Compartir y transformar | 8 |
-
----
-
-## DD-008 — Vibe Coding como transferencia principal
-
-**Estado:** Aceptada
-
-### Decisión
-
-La transferencia pedagógica priorizará el Vibe Coding.
-
-### Razón
-
-Permite integrar:
-
-- lenguaje natural;
-- pensamiento computacional;
-- diseño;
-- IA;
-- prueba;
-- corrección;
-- creatividad.
-
-### Condición
-
-El Vibe Coding debe presentarse como proceso iterativo y no como generación automática de soluciones.
-
----
-
-## DD-009 — El inglés tendrá función comunicativa
-
-**Estado:** Aceptada
-
-### Decisión
-
-El inglés se utilizará para:
-
-- expresar emociones;
-- comunicar necesidades;
-- escuchar;
-- colaborar;
-- dar retroalimentación;
-- presentar;
-- crear mensajes.
-
-### Razón
-
-La lengua debe relacionarse con acciones comunicativas reales dentro del proyecto.
-
----
-
-## DD-010 — Nivel lingüístico A1–A2
-
-**Estado:** Aceptada
-
-### Decisión
-
-Los recursos lingüísticos principales se diseñarán para nivel A1–A2.
-
-### Consecuencias
-
-Se utilizarán:
-
-- frases breves;
-- modelos;
-- traducciones;
+- lenguaje claro;
+- ejemplos;
 - apoyos visuales;
-- marcos de oración;
-- uso flexible de ambos idiomas.
+- expresiones breves;
+- traducciones;
+- alternativas de participación.
 
 ---
 
-## DD-011 — No forzar relatos personales
+## PED-004 — Las actividades utilizarán casos ficticios
 
 **Estado:** Aceptada
 
 ### Decisión
 
-Ningún estudiante estará obligado a compartir:
+Las actividades relacionadas con convivencia, emociones, reparación e IA utilizarán situaciones ficticias.
 
-- experiencias;
-- emociones personales;
-- conflictos;
+### Razón
+
+Permite trabajar pedagógicamente sin exponer experiencias reales.
+
+### Implicaciones
+
+No se solicitarán:
+
+- relatos personales;
+- nombres;
+- conflictos reales;
 - información familiar;
-- testimonios.
-
-### Consecuencia
-
-La participación puede realizarse mediante casos, personajes, dibujos, escritura o análisis general.
+- datos disciplinarios.
 
 ---
 
-## DD-012 — No automatizar empatía ni restauración
+## PED-005 — La participación personal no será obligatoria
 
 **Estado:** Aceptada
 
 ### Decisión
 
-La tecnología no debe:
+Ningún estudiante estará obligado a compartir experiencias, emociones o conflictos propios.
 
-- decidir reparaciones;
-- interpretar emociones;
-- determinar culpabilidad;
-- recomendar sanciones;
-- gestionar casos;
-- reemplazar mediación.
+### Implicaciones
 
-### Razón
+Las actividades deben permitir:
 
-La convivencia requiere contexto, responsabilidad humana, cuidado y protección.
+- responder mediante ficción;
+- participar en grupo;
+- dibujar;
+- escribir de forma general;
+- observar;
+- utilizar ejemplos preparados.
 
 ---
 
-## DD-013 — Evaluar procesos y productos
+## PED-006 — El enfoque será restaurativo y no punitivo
 
 **Estado:** Aceptada
 
 ### Decisión
 
-La evaluación no se centrará únicamente en el prototipo final.
+El recurso promoverá:
 
-### Evidencias
+- escucha;
+- reconocimiento de perspectivas;
+- identificación de efectos;
+- responsabilidad;
+- reparación;
+- prevención;
+- construcción de acuerdos.
 
-- borradores;
-- preguntas;
-- diagramas;
-- decisiones;
-- pruebas;
-- errores;
-- cambios;
-- reflexiones;
-- colaboración.
+### No promoverá
+
+- culpabilización automática;
+- etiquetamiento;
+- rankings;
+- sanciones automáticas;
+- reconciliación forzada;
+- diagnóstico emocional.
 
 ---
 
-## DD-014 — No utilizar rankings
+# Decisiones de contenido
+
+## CNT-001 — `knowledge/` es la fuente pedagógica principal
 
 **Estado:** Aceptada
 
 ### Decisión
 
-No se crearán rankings públicos de:
+Los documentos Markdown de:
 
-- estudiantes;
-- equipos;
-- prototipos;
-- comportamiento;
-- participación.
+```text
+knowledge/
+```
 
-### Razón
+son la fuente pedagógica principal.
 
-Los rankings pueden desplazar el enfoque de colaboración y generar exposición o competencia innecesaria.
+### Jerarquía
 
----
+```text
+knowledge/*.md
+        ↓
+knowledge/data/unit-content.json
+        ↓
+docs/data/unit-content.json
+        ↓
+interfaz
+```
 
-## DD-015 — Todas las actividades tendrán alternativa desconectada
+### Implicaciones
 
-**Estado:** Aceptada
-
-### Decisión
-
-Cada actividad que utilice tecnología deberá contar con una alternativa en papel o simulada.
-
-### Razón
-
-La conectividad o disponibilidad de dispositivos no debe determinar la participación ni la evaluación.
+No se debe corregir únicamente la interfaz cuando existe una fuente anterior.
 
 ---
 
-## DD-016 — Markdown como fuente pedagógica principal
+## CNT-002 — Se utilizará una capa estructurada en JSON
 
 **Estado:** Aceptada
 
-### Decisión
-
-Los documentos Markdown de `knowledge/` son la fuente principal para decisiones pedagógicas.
-
-### Capa estructurada
+### Archivo principal
 
 ```text
 knowledge/data/unit-content.json
 ```
 
-funciona como fuente de contenido para la interfaz.
+### Función
+
+Estructurar contenido reutilizable para:
+
+- momentos;
+- sesiones;
+- lenguaje;
+- evaluación;
+- recursos;
+- metadatos.
+
+---
+
+## CNT-003 — La interfaz utilizará una copia del JSON dentro de `docs/`
+
+**Estado:** Aceptada
+
+### Archivo público
+
+```text
+docs/data/unit-content.json
+```
+
+### Razón
+
+Evitar problemas de rutas y publicación mediante GitHub Pages.
 
 ### Regla
 
-Ante contradicciones:
+La copia no debe editarse independientemente.
 
-1. revisar Markdown;
-2. confirmar decisión;
-3. actualizar JSON;
-4. actualizar interfaz.
+### Flujo
+
+```text
+Actualizar Markdown
+        ↓
+Actualizar JSON principal
+        ↓
+Validar
+        ↓
+Copiar a docs/data/
+        ↓
+Probar
+```
 
 ---
 
-## DD-017 — Sin conexión directa con IA en la primera versión
+## CNT-004 — El contenido esencial de privacidad no dependerá de JavaScript
+
+**Estado:** Aceptada
+
+### Razón
+
+Los avisos de protección deben permanecer visibles aunque falle la carga de datos.
+
+### Implicaciones
+
+Los siguientes contenidos deben escribirse directamente en HTML cuando corresponda:
+
+- aviso de prototipo;
+- privacidad;
+- alcance;
+- uso responsable de IA;
+- rutas institucionales;
+- participación voluntaria.
+
+---
+
+## CNT-005 — Todo contenido publicado debe tener una fuente identificable
+
+**Estado:** Aceptada
+
+### Documento de referencia
+
+```text
+docs/CONTENT_MAPPING.md
+```
+
+### Implicaciones
+
+Toda página debe poder relacionarse con:
+
+- una fuente;
+- una historia de usuario;
+- uno o varios componentes;
+- una responsabilidad de actualización.
+
+---
+
+# Decisiones de experiencia de usuario
+
+## UX-001 — La navegación principal tendrá seis entradas
+
+**Estado:** Aceptada
+
+### Navegación
+
+```text
+Inicio
+Momentos
+Lenguaje
+Recursos
+Guía docente
+Acerca del proyecto
+```
+
+### Razón
+
+Esta estructura responde a las principales necesidades de estudiantes, docentes y visitantes.
+
+---
+
+## UX-002 — La navegación evitará menús profundos
 
 **Estado:** Aceptada
 
 ### Decisión
 
-El recurso web inicial no enviará prompts automáticamente a servicios externos.
+La primera versión no utilizará menús multinivel complejos.
 
 ### Razón
 
-Esto evita:
+Mejora:
 
-- recopilación no prevista;
+- comprensión;
+- uso móvil;
+- navegación con teclado;
+- mantenimiento.
+
+---
+
+## UX-003 — Se diferenciará contenido estudiantil y docente
+
+**Estado:** Aceptada con implementación por validar
+
+### Decisión inicial
+
+Las páginas de sesión presentarán contenido estudiantil y docente dentro de la misma página, mediante secciones claramente identificadas.
+
+### Razón
+
+Evita:
+
+- duplicación de páginas;
+- rutas adicionales;
+- mantenimiento paralelo.
+
+### Condiciones
+
+- el contenido docente debe estar claramente marcado;
+- no debe confundirse con instrucciones estudiantiles;
+- debe poder enlazarse mediante anclas;
+- puede utilizar `details` y `summary` para contenido complementario, no para ocultar alertas esenciales.
+
+### Revisión
+
+Esta decisión debe probarse durante la Entrega 2.
+
+Si genera confusión, podrá reemplazarse por páginas separadas.
+
+---
+
+## UX-004 — Las sesiones utilizarán inicialmente una plantilla dinámica
+
+**Estado:** Aceptada para prototipo
+
+### Ruta prevista
+
+```text
+docs/moments/session.html?id=01
+```
+
+### Razón
+
+Permite:
+
+- evitar dieciséis archivos duplicados;
+- centralizar el renderizado;
+- reutilizar el JSON;
+- simplificar mantenimiento.
+
+### Condiciones
+
+- manejar parámetros inválidos;
+- mostrar errores claros;
+- mantener contenido alternativo;
+- comprobar accesibilidad;
+- probar en GitHub Pages.
+
+### Alternativa
+
+Si la plantilla dinámica genera barreras, se crearán páginas estáticas por sesión.
+
+---
+
+## UX-005 — El contenido esencial debe funcionar sin interacciones complejas
+
+**Estado:** Aceptada
+
+### Implicaciones
+
+La primera versión no dependerá de:
+
+- modales;
+- gestos;
+- drag and drop;
+- hover;
+- animaciones;
+- componentes personalizados complejos.
+
+---
+
+# Decisiones visuales
+
+## VIS-001 — Se utilizará un sistema visual calmado y no punitivo
+
+**Estado:** Aceptada
+
+### Características
+
+- tono acogedor;
+- jerarquías claras;
+- espacios amplios;
+- advertencias informativas;
+- colores con suficiente contraste;
+- ausencia de iconografía disciplinaria.
+
+---
+
+## VIS-002 — Se utilizarán fuentes del sistema
+
+**Estado:** Aceptada
+
+### Implementación
+
+```css
+font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  sans-serif;
+```
+
+### Razón
+
+- mejor rendimiento;
+- menor dependencia;
+- ausencia de servicios externos;
+- privacidad;
+- disponibilidad.
+
+---
+
+## VIS-003 — Los recursos gráficos se almacenarán localmente
+
+**Estado:** Aceptada
+
+### Rutas
+
+```text
+docs/assets/icons/
+docs/assets/images/
+```
+
+### Razón
+
+Evitar dependencias remotas y mantener control sobre accesibilidad, permisos y rendimiento.
+
+---
+
+# Decisiones técnicas
+
+## TEC-001 — El recurso utilizará HTML, CSS y JavaScript sin framework
+
+**Estado:** Aceptada
+
+### Razón
+
+El alcance no justifica:
+
+- React;
+- Vue;
+- Angular;
+- jQuery;
+- Bootstrap;
+- Tailwind;
+- sistemas complejos de construcción.
+
+### Beneficios
+
+- simplicidad;
+- mantenimiento;
+- rendimiento;
+- aprendizaje;
+- menor dependencia.
+
+---
+
+## TEC-002 — El sitio se implementará desde `docs/`
+
+**Estado:** Aceptada
+
+### Razón
+
+GitHub Pages puede publicar directamente desde:
+
+```text
+main
+/docs
+```
+
+---
+
+## TEC-003 — Las secciones principales utilizarán páginas HTML estáticas
+
+**Estado:** Aceptada
+
+### Ejemplos
+
+```text
+docs/index.html
+docs/moments/index.html
+docs/language/index.html
+docs/resources/index.html
+docs/teacher-guide/index.html
+docs/about/index.html
+```
+
+### Razón
+
+Mantener navegación predecible, enlaces directos y contenido disponible.
+
+---
+
+## TEC-004 — JavaScript se utilizará como mejora progresiva
+
+**Estado:** Aceptada
+
+### Puede utilizarse para
+
+- menú móvil;
+- carga de JSON;
+- filtros;
+- búsqueda local;
+- copiar texto;
+- mensajes de estado;
+- plantilla de sesión.
+
+### No debe utilizarse para
+
+- ocultar toda la estructura;
+- recopilar información;
+- crear cuentas;
+- transmitir respuestas;
+- conectar automáticamente con IA.
+
+---
+
+## TEC-005 — El código se implementará mediante Codex conectado al repositorio
+
+**Estado:** Aceptada
+
+### Decisión
+
+La implementación técnica se realizará principalmente en Codex, conectado al repositorio de GitHub.
+
+### Función de esta conversación
+
+Aquí se continuará con:
+
+- decisiones pedagógicas;
+- alcance;
+- experiencia de usuario;
+- revisión de contenido;
+- revisión visual;
+- criterios de aceptación;
+- evaluación de resultados.
+
+### Función de Codex
+
+Codex se utilizará para:
+
+- crear HTML;
+- crear CSS;
+- crear JavaScript;
+- crear carpetas;
+- validar JSON;
+- ejecutar pruebas;
+- revisar rutas;
+- corregir errores;
+- preparar cambios y commits.
+
+### Flujo
+
+```text
+Definir entrega aquí
+        ↓
+Preparar prompt para Codex
+        ↓
+Codex implementa
+        ↓
+Revisar resultado
+        ↓
+Codex corrige
+        ↓
+Aprobar y hacer commit
+```
+
+---
+
+## TEC-006 — El desarrollo se realizará por entregas
+
+**Estado:** Aceptada
+
+### Entregas
+
+```text
+Entrega 0 — Preparación técnica
+Entrega 1 — Estructura mínima
+Entrega 2 — Contenido pedagógico
+Entrega 3 — Recursos e interacción
+Entrega 4 — Pruebas y publicación
+```
+
+### Razón
+
+Evitar construir todo simultáneamente y facilitar revisión.
+
+---
+
+## TEC-007 — La Entrega 0 no incluirá todo el sitio
+
+**Estado:** Aceptada
+
+### Alcance de la Entrega 0
+
+- estructura de carpetas;
+- archivos base;
+- página inicial mínima;
+- página 404;
+- CSS base;
+- JavaScript base;
+- copia del JSON;
+- servidor local;
+- validaciones.
+
+### Fuera de esta entrega
+
+- dieciséis sesiones completas;
+- filtros;
+- rúbricas;
+- todos los imprimibles;
+- todas las páginas finales;
+- aplicación futura.
+
+---
+
+## TEC-008 — El código debe utilizar rutas relativas compatibles con GitHub Pages
+
+**Estado:** Aceptada
+
+### Regla
+
+No utilizar rutas internas que comiencen con `/` salvo que exista una razón comprobada.
+
+### Razón
+
+El sitio se publicará dentro de la subruta del repositorio.
+
+---
+
+## TEC-009 — El contenido del JSON se insertará de forma segura
+
+**Estado:** Aceptada
+
+### Preferir
+
+```javascript
+element.textContent = value;
+```
+
+### Evitar
+
+```javascript
+element.innerHTML = value;
+```
+
+cuando los datos provengan del JSON.
+
+---
+
+## TEC-010 — No se añadirán dependencias externas en la primera versión
+
+**Estado:** Aceptada
+
+### Incluye
+
+- sin CDN;
+- sin fuentes externas;
+- sin scripts externos;
+- sin bibliotecas no necesarias;
+- sin servicios de terceros.
+
+---
+
+# Decisiones de datos
+
+## DAT-001 — Los identificadores serán estables y predecibles
+
+**Estado:** Aceptada
+
+### Ejemplos
+
+```text
+moment-1
+session-01
+expression-001
+message-001
+```
+
+### Razón
+
+Facilitar relaciones, enlaces, filtros y mantenimiento.
+
+---
+
+## DAT-002 — Las sesiones utilizarán dos dígitos
+
+**Estado:** Aceptada
+
+### Formato
+
+```text
+session-01
+...
+session-16
+```
+
+---
+
+## DAT-003 — El JSON debe validarse antes de copiarse
+
+**Estado:** Aceptada
+
+### Comando
+
+```bash
+python -m json.tool knowledge/data/unit-content.json
+```
+
+### Validaciones adicionales
+
+- cuatro momentos;
+- dieciséis sesiones;
+- treinta y dos horas;
+- identificadores únicos;
+- relaciones válidas;
+- ausencia de datos personales.
+
+---
+
+## DAT-004 — No se creará todavía un JSON Schema formal
+
+**Estado:** Pospuesta
+
+### Razón
+
+Debe confirmarse primero la estructura real y estable de `unit-content.json`.
+
+### Posible archivo futuro
+
+```text
+docs/data/unit-content.schema.json
+```
+
+---
+
+# Decisiones de accesibilidad
+
+## ACC-001 — La accesibilidad se incorporará desde la primera entrega
+
+**Estado:** Aceptada
+
+### Incluye
+
+- enlace para saltar;
+- HTML semántico;
+- foco visible;
+- teclado;
+- móvil;
+- zoom;
+- idioma;
+- encabezados;
+- movimiento reducido;
+- impresión.
+
+---
+
+## ACC-002 — El sitio se diseñará primero para móvil
+
+**Estado:** Aceptada
+
+### Ancho mínimo de referencia
+
+```text
+320 px
+```
+
+### Pruebas
+
+También se probará en:
+
+- 375 px;
+- 768 px;
+- 1024 px;
+- 1440 px.
+
+---
+
+## ACC-003 — No se dependerá del color
+
+**Estado:** Aceptada
+
+### Implicaciones
+
+El estado, idioma, momento, advertencia o categoría debe comunicarse también mediante:
+
+- texto;
+- etiqueta;
+- forma;
+- título;
+- icono acompañado de texto.
+
+---
+
+## ACC-004 — Las tablas complejas tendrán una alternativa responsive
+
+**Estado:** Aceptada
+
+### Opciones
+
+- desplazamiento controlado;
+- tarjetas por criterio;
+- lista equivalente;
+- versión imprimible.
+
+---
+
+## ACC-005 — La interfaz respetará movimiento reducido
+
+**Estado:** Aceptada
+
+### Implicación
+
+No se utilizarán animaciones esenciales para comprender el contenido.
+
+---
+
+# Decisiones de privacidad
+
+## PRI-001 — El sitio no recopilará datos personales
+
+**Estado:** Aceptada
+
+### No utilizar
+
+```text
+nombres
+correos
+teléfonos
+fotografías identificables
+relatos
+conflictos reales
+datos emocionales
+calificaciones
+información disciplinaria
+```
+
+---
+
+## PRI-002 — No se utilizará almacenamiento del navegador
+
+**Estado:** Aceptada
+
+### Prohibido en la fase actual
+
+```text
+localStorage
+sessionStorage
+IndexedDB
+cookies
+```
+
+---
+
+## PRI-003 — No se utilizará analítica
+
+**Estado:** Aceptada
+
+### Decisión
+
+No se añadirán herramientas de:
+
+- seguimiento;
+- conteo de visitas;
+- píxeles;
+- perfiles;
+- mapas de calor.
+
+### Razón
+
+No son necesarias para el propósito actual y añadirían riesgos.
+
+---
+
+## PRI-004 — El recurso no funcionará como canal de denuncias
+
+**Estado:** Aceptada
+
+### Implicaciones
+
+No incluir:
+
+- formularios de reporte;
+- carga de evidencias;
+- envío de testimonios;
+- registro de casos;
+- seguimiento de situaciones.
+
+---
+
+## PRI-005 — Las rutas institucionales permanecerán fuera de la automatización
+
+**Estado:** Aceptada
+
+### Decisión
+
+El recurso puede recordar que existen rutas institucionales, pero no debe:
+
+- sustituirlas;
+- inventarlas;
+- automatizarlas;
+- diagnosticar cuándo aplican;
+- tomar decisiones.
+
+---
+
+# Decisiones sobre inteligencia artificial
+
+## AI-001 — La IA será objeto de aprendizaje crítico
+
+**Estado:** Aceptada
+
+### El contenido debe explicar
+
+- errores;
+- invenciones;
+- sesgos;
+- límites;
+- protección de datos;
+- revisión humana;
+- autoría.
+
+---
+
+## AI-002 — El sitio no se conectará directamente con una IA
+
+**Estado:** Aceptada
+
+### Razón
+
+Una integración requeriría:
+
 - credenciales;
-- dependencia de APIs;
-- exposición de contenidos;
+- política de datos;
+- control de contenido;
+- revisión de edad;
 - costos;
-- complejidad adicional.
+- seguridad;
+- responsabilidades institucionales.
 
 ---
 
-## DD-018 — Diseño accesible y responsive
+## AI-003 — Los prompts utilizarán situaciones ficticias
 
 **Estado:** Aceptada
 
-### Decisión
+### Regla
 
-El recurso debe:
+Los ejemplos no incluirán:
 
-- funcionar con teclado;
-- tener foco visible;
-- utilizar HTML semántico;
-- mantener contraste;
-- adaptarse a móviles;
-- ofrecer recursos imprimibles;
-- no depender únicamente del color.
+- nombres;
+- historias reales;
+- cursos;
+- datos personales;
+- casos identificables.
 
 ---
 
-## DD-019 — Separar guía docente y actividad estudiantil
+# Decisiones de despliegue
+
+## DEP-001 — El sitio se publicará inicialmente con GitHub Pages
 
 **Estado:** Aceptada
 
-### Decisión
+### Configuración prevista
 
-Cuando sea posible, la interfaz diferenciará:
+```text
+Branch: main
+Folder: /docs
+```
 
-- orientaciones docentes;
-- instrucciones estudiantiles.
+---
+
+## DEP-002 — El sitio se probará localmente antes de publicar
+
+**Estado:** Aceptada
+
+### Comando
+
+```bash
+python -m http.server 8000
+```
+
+### URL desde la raíz
+
+```text
+http://localhost:8000/docs/
+```
+
+---
+
+## DEP-003 — La URL pública no se documentará hasta confirmarla
+
+**Estado:** Aceptada
 
 ### Razón
 
-Esto reduce carga cognitiva y evita mostrar instrucciones de protección o mediación fuera de contexto.
+Evitar enlaces incorrectos o temporales.
 
 ---
 
-## DD-020 — No definir todavía una licencia
+## DEP-004 — Se utilizará `git revert` para revertir publicaciones
 
 **Estado:** Aceptada
 
-### Decisión
+### Evitar en la rama principal
 
-No se añadirá una licencia hasta revisar:
-
-- autoría;
-- propiedad institucional;
-- uso de materiales;
-- recursos de terceros;
-- productos estudiantiles;
-- condiciones de publicación.
+```text
+git reset --hard
+git push --force
+```
 
 ---
 
-## DD-021 — No prometer confidencialidad absoluta
+# Decisiones de documentación
+
+## DOC-001 — La documentación previa al desarrollo está completa
 
 **Estado:** Aceptada
 
-### Decisión
+### Documentos de `docs/`
 
-Los materiales deben explicar que existen límites a la confidencialidad cuando aparece información relacionada con riesgo o vulneración de derechos.
+```text
+SITEMAP.md
+PAGE_INVENTORY.md
+COMPONENT_INVENTORY.md
+TECHNICAL_ARCHITECTURE.md
+IMPLEMENTATION_PLAN.md
+DATA_SCHEMA.md
+CONTENT_MAPPING.md
+TESTING_PLAN.md
+DEPLOYMENT.md
+README.md
+```
 
 ---
 
-## DD-022 — Socialización controlada
+## DOC-002 — Los documentos Markdown dentro de `docs/` se consideran potencialmente públicos
 
 **Estado:** Aceptada
 
-### Decisión
+### Implicaciones
 
-La feria de prototipos y la campaña no implican publicación automática en internet.
+No incluir:
 
-### Requisitos
-
-- revisión;
-- anonimización;
-- autorización cuando corresponda;
-- eliminación de información identificable.
+- datos personales;
+- credenciales;
+- información reservada;
+- relatos reales;
+- rutas privadas.
 
 ---
 
-## DD-023 — El recurso web no será un canal de denuncias
+## DOC-003 — Los cambios significativos deben sincronizar documentos relacionados
 
 **Estado:** Aceptada
 
-### Decisión
+### Ejemplo
 
-La interfaz no incluirá funciones para:
+Un cambio de alcance puede requerir actualizar:
 
-- reportar casos;
-- cargar evidencias;
-- enviar relatos;
-- identificar responsables;
-- gestionar convivencia.
-
-### Razón
-
-Estas funciones requerirían una arquitectura, una responsabilidad y unos protocolos diferentes.
-
----
-
-## DD-024 — Reconocer el uso de IA
-
-**Estado:** Aceptada
-
-### Decisión
-
-Cuando un producto utilice IA, los estudiantes deben poder explicar:
-
-- qué generó la herramienta;
-- qué revisó el equipo;
-- qué se modificó;
-- qué decisiones fueron humanas.
+```text
+PROJECT_BRIEF.md
+README.md
+ROADMAP.md
+USER_STORIES.md
+DESIGN_DECISIONS.md
+CHANGELOG.md
+```
 
 ---
 
-## Revisión de decisiones
+# Decisiones pospuestas
 
-Este documento debe revisarse cuando:
+## Futuras cuentas de usuario
 
-- cambie la fase del proyecto;
-- se implemente la unidad;
-- se inicie una aplicación;
-- cambie la arquitectura;
-- se adopten nuevas herramientas;
-- se identifiquen riesgos;
-- la institución defina nuevas condiciones.
+**Estado:** Pospuesta
+
+Requiere una nueva fase de:
+
+- privacidad;
+- seguridad;
+- autenticación;
+- autorización;
+- administración.
+
+---
+
+## Guardado de progreso
+
+**Estado:** Pospuesta
+
+Requeriría identificadores y almacenamiento.
+
+---
+
+## Aplicación institucional
+
+**Estado:** Pospuesta
+
+Depende de resultados de implementación y evaluación.
+
+---
+
+## Panel administrativo
+
+**Estado:** Descartada para el recurso actual
+
+No responde al alcance pedagógico del prototipo.
+
+---
+
+## Análisis de emociones
+
+**Estado:** Descartada
+
+No se utilizará análisis de:
+
+- rostro;
+- voz;
+- texto;
+- comportamiento.
+
+---
+
+## Recomendaciones disciplinarias automáticas
+
+**Estado:** Descartada
+
+Contradice el enfoque humano y restaurativo.
+
+---
+
+# Decisiones pendientes
+
+Las siguientes decisiones deberán resolverse durante el desarrollo:
+
+- estructura real definitiva de `unit-content.json`;
+- componentes exactos de la página inicial;
+- distribución visual de las páginas de momento;
+- comportamiento final del menú móvil;
+- formato responsive de las rúbricas;
+- necesidad real de búsqueda local;
+- formato final de imprimibles;
+- generación dinámica o estática de algunos contenidos;
+- estrategia de pruebas con usuarios;
+- licencia del repositorio y los recursos.
+
+---
+
+## Regla de actualización
+
+Este documento debe actualizarse cuando:
+
+- se toma una decisión nueva;
+- una decisión cambia;
+- una prueba contradice una decisión;
+- se adopta una tecnología;
+- cambia el alcance;
+- cambia la estrategia de datos;
+- se inicia una fase;
+- se descarta una función.
+
+Una decisión reemplazada no debe eliminarse. Debe conservarse con el estado:
+
+```text
+Reemplazada
+```
+
+y enlazar la decisión que la sustituye.
