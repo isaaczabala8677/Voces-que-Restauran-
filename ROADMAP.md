@@ -2,57 +2,58 @@
 
 ## Propósito
 
-Este documento organiza las fases, prioridades, hitos y condiciones de avance de **Voces que Restauran**.
+Este documento organiza las fases, entregas, prioridades, dependencias y condiciones de avance de **Voces que Restauran**.
 
 La hoja de ruta distingue entre:
 
 - documentación;
-- recurso web;
+- desarrollo técnico;
+- pruebas;
+- publicación;
 - implementación pedagógica;
-- investigación;
+- sistematización;
 - posible aplicación futura.
 
 ---
 
-## Principio de desarrollo
+## Principio general
 
 El proyecto sigue esta secuencia:
 
 ```text
-Comprender el problema
+Comprender
         ↓
-Definir el alcance
+Definir
         ↓
-Documentar la unidad
+Documentar
         ↓
-Diseñar el recurso
+Diseñar
         ↓
-Construir un prototipo estático
+Desarrollar
         ↓
 Probar
+        ↓
+Publicar
         ↓
 Implementar
         ↓
 Sistematizar
         ↓
-Formular recomendaciones
-        ↓
-Evaluar una aplicación futura
+Evaluar posibilidades futuras
 ```
 
-La aplicación futura no se construye antes de la implementación pedagógica y la cocreación con estudiantes.
+La aplicación futura no se construirá antes de la implementación pedagógica.
 
 ---
 
 ## Estados
-
-Cada fase puede tener uno de estos estados:
 
 ```text
 No iniciada
 En preparación
 En curso
 En revisión
+Completada inicialmente
 Completada
 Bloqueada
 Pospuesta
@@ -60,11 +61,33 @@ Pospuesta
 
 ---
 
-## Fase de definición estratégica
+# Estado general
+
+```text
+Definición estratégica: completada inicialmente
+Arquitectura documental: completada
+Base de conocimiento: completada inicialmente
+Arquitectura de información: completada
+Arquitectura técnica: completada
+Planificación de desarrollo: completada
+Sincronización documental: en curso
+Entrega 0: no iniciada
+Entrega 1: no iniciada
+Entrega 2: no iniciada
+Entrega 3: no iniciada
+Entrega 4: no iniciada
+Implementación pedagógica: no iniciada
+Sistematización: no iniciada
+Aplicación futura: pospuesta
+```
+
+---
+
+# Fase de definición estratégica
 
 **Estado:** Completada inicialmente
 
-### Objetivo
+## Objetivo
 
 Definir:
 
@@ -74,35 +97,43 @@ Definir:
 - alcance;
 - exclusiones;
 - entregables;
+- usuarios;
 - criterios de éxito;
 - riesgos.
 
-### Entregables
+## Entregables
 
 ```text
 PROJECT_BRIEF.md
 README.md
 ```
 
-### Criterios de cierre
+## Resultado
 
-- el producto actual está claramente definido;
-- la aplicación futura se distingue de la unidad;
-- se identifican usuarios;
-- se establecen restricciones;
-- se documentan criterios de éxito.
+El producto actual quedó definido como:
+
+> una unidad didáctica interdisciplinaria apoyada por un recurso web estático.
 
 ---
 
-## Fase de arquitectura documental
+# Fase de arquitectura documental
 
-**Estado:** Completada inicialmente
+**Estado:** Completada
 
-### Objetivo
+## Objetivo
 
-Definir la organización del repositorio y la función de cada archivo.
+Organizar el repositorio y definir la función de cada área.
 
-### Entregables
+## Estructura
+
+```text
+docs/
+future-app/
+knowledge/
+research/
+```
+
+## Entregables
 
 ```text
 README.md
@@ -110,643 +141,597 @@ DESIGN_DECISIONS.md
 knowledge/KNOWLEDGE_ARCHITECTURE.md
 ```
 
-### Estructura principal
-
-```text
-docs/
-future-app/
-knowledge/
-research/
-```
-
-### Criterios de cierre
-
-- cada carpeta tiene una función;
-- no existen duplicaciones no justificadas;
-- las fuentes de verdad están definidas;
-- las decisiones se registran.
-
 ---
 
-## Fase de base de conocimiento
+# Fase de base de conocimiento
 
 **Estado:** Completada inicialmente
 
-### Objetivo
+## Objetivo
 
-Documentar la unidad didáctica completa.
+Documentar la unidad pedagógica.
 
-### Entregables
+## Contenido
 
 ```text
 knowledge/
+├── contexto
+├── transferencia
+├── población
+├── unidad
+├── momentos
+├── pedagogía
+├── lenguaje
+├── prompts
+└── datos
 ```
 
-Incluye:
+## Resultado
 
-- contexto;
-- transferencia desde Corea;
-- población;
-- unidad;
-- momentos;
-- sesiones;
+Se documentaron:
+
+- cuatro momentos;
+- dieciséis sesiones;
+- treinta y dos horas;
 - evaluación;
+- evidencias;
 - productos;
-- lenguaje;
+- recursos lingüísticos;
 - prompts;
-- datos.
-
-### Criterios de cierre
-
-- existen 4 momentos;
-- existen 16 sesiones;
-- la duración total es de 32 horas;
-- los productos están documentados;
-- la evaluación está definida;
-- existen medidas de privacidad;
-- existen alternativas desconectadas.
+- alternativas desconectadas;
+- criterios de privacidad.
 
 ---
 
-## Fase de sincronización documental
+# Fase de arquitectura de información
+
+**Estado:** Completada
+
+## Objetivo
+
+Definir páginas, navegación y componentes.
+
+## Entregables
+
+```text
+docs/SITEMAP.md
+docs/PAGE_INVENTORY.md
+docs/COMPONENT_INVENTORY.md
+```
+
+## Resultado
+
+Se definieron:
+
+- navegación principal;
+- estructura de páginas;
+- páginas de momentos;
+- páginas de lenguaje;
+- recursos;
+- guía docente;
+- páginas institucionales;
+- estados del sistema;
+- componentes reutilizables.
+
+---
+
+# Fase de arquitectura técnica
+
+**Estado:** Completada
+
+## Objetivo
+
+Definir tecnologías, estructura, datos, renderizado, pruebas y despliegue.
+
+## Entregables
+
+```text
+docs/TECHNICAL_ARCHITECTURE.md
+docs/IMPLEMENTATION_PLAN.md
+docs/DATA_SCHEMA.md
+docs/CONTENT_MAPPING.md
+docs/TESTING_PLAN.md
+docs/DEPLOYMENT.md
+docs/README.md
+```
+
+## Decisiones principales
+
+- HTML, CSS y JavaScript sin framework;
+- publicación desde `docs/`;
+- GitHub Pages;
+- JSON local;
+- recursos locales;
+- sin almacenamiento;
+- sin analítica;
+- sin APIs externas;
+- desarrollo por entregas;
+- implementación mediante Codex.
+
+---
+
+# Fase de sincronización documental
 
 **Estado:** En curso
 
-### Objetivo
+## Objetivo
 
-Alinear todos los documentos principales con las decisiones vigentes.
+Alinear los documentos existentes con las decisiones técnicas recientes.
 
-### Archivos a revisar
+## Documentos prioritarios
 
 ```text
-README.md
-PROJECT_BRIEF.md
-ROADMAP.md
-USER_STORIES.md
-PEDAGOGICAL_FRAMEWORK.md
-DESIGN_SYSTEM.md
 DESIGN_DECISIONS.md
-CONTENT_GUIDELINES.md
-PRIVACY.md
-ACCESSIBILITY.md
-CONTRIBUTING.md
+ROADMAP.md
 CHANGELOG.md
 ```
 
-### Tareas
+## Criterios de cierre
 
-- revisar alcance;
-- eliminar referencias contradictorias;
-- incluir la estructura real;
-- verificar privacidad;
-- verificar accesibilidad;
-- actualizar relaciones entre documentos;
-- registrar cambios.
-
-### Criterios de cierre
-
-- no se presenta una aplicación como producto inmediato;
-- todos los archivos reconocen el recurso web estático;
-- `CONTENT_GUIDELINES.md` aparece en la arquitectura;
-- las historias de usuario coinciden con el alcance;
-- el `CHANGELOG.md` refleja la actualización.
+- Codex aparece como entorno de implementación;
+- las decisiones técnicas están registradas;
+- el roadmap incluye las entregas;
+- el changelog registra la fase documental;
+- no existen contradicciones sobre el producto actual;
+- la aplicación futura permanece pospuesta.
 
 ---
 
-## Fase de historias de usuario
-
-**Estado:** En revisión
-
-### Objetivo
-
-Traducir las necesidades del recurso web en historias verificables.
-
-### Entregable
-
-```text
-USER_STORIES.md
-```
-
-### Tareas
-
-- definir roles;
-- identificar necesidades;
-- redactar criterios de aceptación;
-- establecer prioridades;
-- incorporar privacidad;
-- incorporar accesibilidad;
-- diferenciar historias actuales y futuras.
-
-### Criterios de cierre
-
-- las historias describen el recurso actual;
-- no incluyen almacenamiento;
-- no incluyen gestión de casos;
-- cada historia tiene criterios de aceptación;
-- las historias prioritarias pueden convertirse en páginas o componentes.
-
----
-
-## Fase de arquitectura de información
+# Entrega 0 — Preparación técnica
 
 **Estado:** No iniciada
 
-### Objetivo
+## Objetivo
 
-Definir cómo se organiza y navega el recurso web.
+Crear una base técnica mínima y funcional.
 
-### Entregables previstos
+## Implementación
 
-```text
-docs/README.md
-Mapa del sitio
-Mapa de navegación
-Inventario de páginas
-Inventario de componentes
-```
+La realizará Codex conectado al repositorio.
 
-### Estructura inicial posible
+## Alcance
 
 ```text
-Inicio
-Proyecto
-Momentos
-Sesiones
-Lenguaje
-Recursos
-Guía docente
-Privacidad
-Accesibilidad
+docs/index.html
+docs/404.html
+docs/css/
+docs/js/
+docs/data/unit-content.json
+carpetas previstas
+servidor local
+validaciones iniciales
 ```
 
-### Tareas
-
-- definir navegación principal;
-- relacionar historias de usuario con páginas;
-- definir jerarquía;
-- diseñar navegación móvil;
-- establecer rutas;
-- identificar contenido imprimible.
-
-### Criterios de cierre
-
-- cada página responde a una necesidad;
-- no existen páginas sin propósito;
-- la navegación es comprensible;
-- el contenido docente y estudiantil está diferenciado.
-
----
-
-## Fase de diseño visual
-
-**Estado:** No iniciada
-
-### Objetivo
-
-Transformar el sistema de diseño en decisiones visuales aplicables.
-
-### Documento base
+## Archivos iniciales
 
 ```text
-DESIGN_SYSTEM.md
+docs/css/base.css
+docs/css/layout.css
+docs/css/components.css
+docs/css/utilities.css
+docs/css/print.css
+docs/js/main.js
+docs/js/navigation.js
+docs/js/data-loader.js
 ```
 
-### Entregables previstos
+## Tareas
 
-- paleta validada;
-- escala tipográfica;
-- espaciado;
-- componentes;
-- estados;
-- diseño responsive;
-- plantillas de páginas;
-- prototipo de navegación.
+- crear estructura;
+- copiar JSON;
+- validar JSON;
+- construir HTML mínimo;
+- definir estilos base;
+- implementar enlace para saltar;
+- implementar navegación inicial;
+- comprobar servidor local;
+- revisar ausencia de servicios externos.
 
-### Criterios de cierre
+## Criterios de cierre
 
-- contraste validado;
-- foco visible;
-- componentes consistentes;
-- diseño móvil;
-- lenguaje visual no punitivo;
-- movimiento reducido contemplado.
-
----
-
-## Fase de datos estructurados
-
-**Estado:** Completada inicialmente
-
-### Objetivo
-
-Preparar contenido estructurado para la interfaz.
-
-### Entregable
-
-```text
-knowledge/data/unit-content.json
-```
-
-### Tareas pendientes
-
-- comprobar coherencia con Markdown;
-- validar estructura;
-- documentar campos;
-- revisar traducciones;
-- revisar duración y sesiones;
-- definir cómo se copiarán los datos hacia `docs/`.
-
-### Validación
-
-```bash
-python -m json.tool knowledge/data/unit-content.json
-```
-
-### Criterios de cierre
-
-- JSON válido;
-- 4 momentos;
-- 16 sesiones;
-- 32 horas;
-- contenido sincronizado;
-- campos documentados.
-
----
-
-## Fase de desarrollo del recurso web
-
-**Estado:** No iniciada
-
-### Objetivo
-
-Construir la primera versión funcional del recurso.
-
-### Ubicación
-
-```text
-docs/
-```
-
-### Tecnologías iniciales
-
-- HTML;
-- CSS;
-- JavaScript;
-- JSON local.
-
-### Alcance mínimo
-
-- página de inicio;
-- presentación del proyecto;
-- navegación por momentos;
-- sesiones;
-- tarjetas bilingües;
-- preguntas restaurativas;
-- recursos docentes;
-- avisos de privacidad;
-- diseño responsive;
-- recursos imprimibles.
-
-### Funciones excluidas
-
-- autenticación;
-- cuentas;
-- bases de datos;
-- formularios con envío;
-- analítica;
-- almacenamiento;
-- conexión directa con IA;
-- gestión de casos.
-
-### Criterios de cierre
-
-- el recurso funciona localmente;
+- el sitio abre localmente;
+- los archivos cargan;
+- el JSON es válido;
 - no existen errores críticos;
-- la navegación es clara;
-- el contenido se carga correctamente;
-- no se recopilan datos;
-- las páginas prioritarias están implementadas.
+- existe navegación mínima;
+- existe foco visible;
+- no se recopilan datos.
 
 ---
 
-## Fase de pruebas técnicas
+# Entrega 1 — Estructura mínima funcional
 
 **Estado:** No iniciada
 
-### Objetivo
+## Objetivo
 
-Comprobar funcionamiento, compatibilidad y estabilidad.
+Construir las páginas esenciales.
 
-### Pruebas
+## Páginas
 
-- enlaces;
+```text
+docs/index.html
+docs/moments/index.html
+docs/about/index.html
+docs/about/scope.html
+docs/teacher-guide/privacy.html
+docs/404.html
+```
+
+## Funciones
+
 - navegación;
-- carga de datos;
-- consola;
-- diferentes navegadores;
-- dispositivos móviles;
-- Chromebook;
-- impresión;
-- modo sin conexión cuando sea posible.
+- menú móvil;
+- tarjetas;
+- avisos;
+- alcance;
+- privacidad;
+- errores.
 
-### Criterios de cierre
-
-- no existen enlaces rotos;
-- no existen errores críticos de consola;
-- el contenido es legible;
-- la navegación funciona;
-- las alternativas imprimibles están disponibles.
-
----
-
-## Fase de pruebas de accesibilidad
-
-**Estado:** No iniciada
-
-### Documento base
+## Historias
 
 ```text
-ACCESSIBILITY.md
+US-001
+US-002
+US-007
+US-014
+US-016
+US-017
+US-018
 ```
 
-### Pruebas
+## Criterios de cierre
 
-- teclado;
-- foco;
-- contraste;
-- zoom;
-- lectores de pantalla;
-- orden de encabezados;
-- textos alternativos;
-- movimiento reducido;
-- tamaños táctiles;
-- móvil.
+El usuario puede:
 
-### Criterios de cierre
-
-- todo funciona con teclado;
-- el foco es visible;
-- no se depende solo del color;
-- las imágenes tienen alternativa;
-- la estructura es semántica;
-- el contenido funciona con zoom.
+- comprender el proyecto;
+- acceder a momentos;
+- consultar privacidad;
+- consultar alcance;
+- navegar con teclado;
+- utilizar el sitio desde móvil.
 
 ---
 
-## Fase de revisión de privacidad
+# Entrega 2 — Contenido pedagógico principal
 
 **Estado:** No iniciada
 
-### Documento base
+## Objetivo
+
+Implementar momentos, sesiones y expresiones prioritarias.
+
+## Páginas
 
 ```text
-PRIVACY.md
+docs/moments/moment-1.html
+docs/moments/moment-2.html
+docs/moments/moment-3.html
+docs/moments/moment-4.html
+docs/moments/session.html
+docs/language/index.html
+docs/language/key-expressions.html
 ```
 
-### Comprobaciones
+## Decisiones
 
-- ausencia de formularios con envío;
-- ausencia de almacenamiento;
-- ausencia de analítica;
-- ausencia de datos personales;
-- ausencia de servicios externos;
-- contenido ficticio;
-- advertencias visibles.
+- plantilla dinámica inicial para sesiones;
+- vista docente y estudiantil en una misma página;
+- contenido diferenciado mediante secciones.
 
-### Criterios de cierre
+## Criterios de cierre
 
-- el recurso no transmite información;
-- no crea identificadores;
-- no almacena respuestas;
-- no solicita datos;
-- no funciona como canal de denuncias.
+- cuatro momentos disponibles;
+- dieciséis sesiones consultables;
+- parámetros manejados correctamente;
+- alternativas desconectadas visibles;
+- privacidad visible;
+- contenido docente diferenciado;
+- expresiones bilingües disponibles.
 
 ---
 
-## Fase de preparación docente
+# Entrega 3 — Lenguaje, recursos y guía docente
 
 **Estado:** No iniciada
 
-### Objetivo
+## Objetivo
 
-Preparar materiales para la implementación.
+Completar los recursos pedagógicos e interacciones locales.
 
-### Entregables
+## Páginas
 
-- guía de implementación;
-- materiales imprimibles;
-- listas de cotejo;
+```text
+docs/language/glossary.html
+docs/language/restorative-questions.html
+docs/language/peace-messages.html
+docs/resources/
+docs/teacher-guide/
+```
+
+## Funciones
+
+- filtros;
+- búsqueda local;
+- copiar texto;
+- acordeones;
+- recursos;
+- prompts;
 - rúbricas;
-- protocolos de cuidado;
-- plan de contingencia;
+- impresión.
+
+## Criterios de cierre
+
+- recursos lingüísticos disponibles;
+- preguntas restaurativas visibles;
+- mensajes de paz disponibles;
+- prompts seguros;
+- guía docente completa;
+- evaluación accesible;
+- recursos imprimibles;
 - alternativas desconectadas.
 
-### Criterios de cierre
-
-- el docente puede implementar cada sesión;
-- los materiales están disponibles;
-- las rutas institucionales están claras;
-- existen opciones para baja conectividad.
-
 ---
 
-## Fase de implementación pedagógica
+# Entrega 4 — Pruebas y publicación
 
 **Estado:** No iniciada
 
-### Objetivo
+## Objetivo
 
-Implementar la unidad con estudiantes.
+Validar, corregir y publicar el recurso.
 
-### Condiciones previas
+## Actividades
 
-- documentación revisada;
-- recurso web probado;
-- materiales preparados;
-- privacidad revisada;
+- pruebas funcionales;
+- pruebas de accesibilidad;
+- revisión de privacidad;
+- pruebas responsive;
+- pruebas de contenido;
+- pruebas de impresión;
+- pruebas en GitHub Pages;
+- corrección de errores;
+- actualización documental.
+
+## Despliegue previsto
+
+```text
+GitHub Pages
+Branch: main
+Folder: /docs
+```
+
+## Criterios de cierre
+
+- URL pública confirmada;
+- sin hallazgos críticos;
+- navegación funcional;
+- JSON cargando;
+- rutas correctas;
 - accesibilidad básica comprobada;
-- aprobación institucional cuando corresponda.
+- privacidad revisada;
+- documentación actualizada.
 
-### Evidencias posibles
+---
+
+# Fase de preparación pedagógica
+
+**Estado:** No iniciada
+
+## Objetivo
+
+Preparar la implementación con estudiantes.
+
+## Entregables
+
+- guía docente;
+- materiales imprimibles;
+- rúbricas;
+- protocolos de cuidado;
+- alternativas desconectadas;
+- plan de contingencia;
+- selección de grupos;
+- cronograma.
+
+## Dependencia
+
+No debe comenzar antes de completar las pruebas principales del recurso.
+
+---
+
+# Fase de implementación pedagógica
+
+**Estado:** No iniciada
+
+## Objetivo
+
+Implementar la unidad durante:
+
+```text
+8 semanas
+16 sesiones
+32 horas
+```
+
+## Evidencias posibles
 
 - productos colectivos;
-- observaciones docentes;
-- registros anonimizados;
+- prototipos;
+- registros docentes;
 - rúbricas;
-- versiones de prototipos;
-- reflexiones generales.
+- reflexiones generales;
+- observaciones anonimizadas;
+- versiones de diseño.
 
-### Restricción
+## Restricciones
 
-No se recopilarán datos personales ni relatos sensibles dentro del repositorio.
+No registrar en el repositorio:
+
+- nombres;
+- relatos;
+- calificaciones individuales;
+- conflictos;
+- información sensible.
 
 ---
 
-## Fase de evaluación y sistematización
+# Fase de evaluación y sistematización
 
 **Estado:** No iniciada
 
-### Objetivo
-
-Analizar:
-
-- utilidad pedagógica;
-- participación;
-- comprensión;
-- uso del inglés;
-- lenguaje restaurativo;
-- experiencia del recurso;
-- barreras;
-- propuestas estudiantiles.
-
-### Ubicación
+## Ubicación
 
 ```text
 research/
 ```
 
-### Entregables previstos
+## Objetivo
 
-- informe de implementación;
+Analizar:
+
+- utilidad;
+- participación;
+- uso del inglés;
+- comprensión de convivencia;
+- lenguaje restaurativo;
+- uso crítico de IA;
+- experiencia de usuario;
+- barreras;
+- prototipos;
+- recomendaciones.
+
+## Productos
+
+- informe;
 - hallazgos anonimizados;
 - recomendaciones;
-- barreras identificadas;
-- mejoras al recurso;
-- necesidades futuras.
+- mejoras;
+- requisitos futuros.
 
 ---
 
-## Fase de mejora del recurso
+# Fase de mejora
 
 **Estado:** No iniciada
 
-### Objetivo
+## Objetivo
 
 Actualizar el recurso con base en:
 
 - pruebas;
 - implementación;
-- retroalimentación;
+- observaciones;
 - accesibilidad;
+- retroalimentación;
 - hallazgos pedagógicos.
-
-### Tareas
-
-- priorizar mejoras;
-- actualizar historias;
-- actualizar contenido;
-- corregir interfaz;
-- registrar decisiones;
-- publicar nueva versión.
 
 ---
 
-## Fase de aplicación futura
+# Fase de aplicación futura
 
-**Estado:** No iniciada
+**Estado:** Pospuesta
 
-### Ubicación conceptual
+## Ubicación
 
 ```text
 future-app/
 ```
 
-### Condiciones para comenzar
+## Condiciones mínimas
 
-No debe iniciarse hasta contar con:
+No podrá comenzar hasta contar con:
 
-1. resultados de implementación;
+1. implementación completada;
 2. necesidades validadas;
-3. participación estudiantil;
-4. revisión institucional;
-5. análisis de riesgos;
-6. definición de responsables;
-7. revisión jurídica;
-8. definición de datos;
-9. plan de seguridad;
-10. criterios de sostenibilidad.
+3. resultados analizados;
+4. participación estudiantil;
+5. aprobación institucional;
+6. revisión jurídica;
+7. evaluación de datos;
+8. plan de seguridad;
+9. responsables definidos;
+10. sostenibilidad.
 
-### Posibles resultados
+## Posibles conclusiones
 
-La evaluación puede concluir que:
+La evaluación puede determinar que:
 
 - se necesita una aplicación;
-- se necesita solo mejorar el recurso web;
-- se necesita otro tipo de material;
-- no es apropiado desarrollar una aplicación.
+- basta con mejorar el sitio;
+- se necesita otro tipo de recurso;
+- no es conveniente crear una aplicación.
 
 ---
 
-## Prioridades
+# Herramientas de trabajo
 
-### Prioridad alta
+## Esta conversación
 
-- sincronizar documentos;
-- revisar historias de usuario;
-- definir arquitectura de información;
-- diseñar navegación;
-- construir recurso estático;
-- validar privacidad y accesibilidad.
+Se utilizará para:
 
-### Prioridad media
+- decisiones pedagógicas;
+- alcance;
+- contenido;
+- diseño de experiencia;
+- revisión;
+- criterios de aceptación;
+- evaluación de resultados.
 
-- preparar materiales imprimibles;
-- realizar pruebas con docentes;
-- mejorar lenguaje visual;
-- documentar componentes.
+## Codex
 
-### Prioridad futura
+Se utilizará para:
 
-- aplicación institucional;
-- almacenamiento;
-- autenticación;
-- integraciones;
-- automatización.
-
-Estas funciones futuras no están aprobadas por aparecer en esta lista.
+- implementación;
+- creación de archivos;
+- ejecución de comandos;
+- validación;
+- pruebas;
+- corrección;
+- preparación de commits.
 
 ---
 
-## Dependencias principales
+# Dependencias
 
 ```text
-PROJECT_BRIEF.md
+Documentación
         ↓
-USER_STORIES.md
+Decisiones sincronizadas
         ↓
-Arquitectura de información
+Prompt para Codex
         ↓
-Diseño
+Entrega 0
         ↓
-Desarrollo
+Entrega 1
         ↓
-Pruebas
+Entrega 2
         ↓
-Implementación
+Entrega 3
         ↓
-Evaluación
+Entrega 4
         ↓
-Futuro
+Implementación pedagógica
 ```
 
 ---
 
-## Próximo hito
+# Próximo hito
 
-El siguiente hito del proyecto es:
+El próximo hito es:
 
-> definir la arquitectura de información del recurso web y convertir las historias de usuario prioritarias en páginas, componentes y criterios de prueba.
+> preparar el prompt maestro para Codex e iniciar la Entrega 0 sin construir todavía el sitio completo.
 
 ---
 
-## Criterio de actualización
+# Criterios de actualización
 
 Este roadmap debe actualizarse cuando:
 
-- se completa una fase;
-- cambia el alcance;
+- inicia una entrega;
+- termina una entrega;
 - aparece un bloqueo;
-- se agrega una dependencia;
+- cambia una decisión;
+- se publica una versión;
 - se inicia implementación;
-- se define una versión;
-- cambia la aplicación futura.
+- cambia el alcance;
+- se evalúa la aplicación futura.
