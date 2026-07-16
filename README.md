@@ -165,27 +165,76 @@ Detectar errores
 Mejorar
 ```
 
-La unidad no comienza construyendo una aplicación.
+La unidad no comienza construyendo una aplicación institucional.
 
-Primero se desarrolla un proceso de cocreación con los estudiantes para comprender sus necesidades, ideas, criterios de seguridad y propuestas.
+Primero se desarrolla un proceso de cocreación con los estudiantes para comprender:
+
+- sus necesidades;
+- sus ideas;
+- sus formas de participación;
+- sus criterios de seguridad;
+- sus propuestas de diseño.
 
 ---
 
 ## Estado del proyecto
 
-El proyecto se encuentra en fase de:
+El proyecto se encuentra en una fase de:
 
 ```text
 Documentación pedagógica
         +
+Definición del producto
+        +
 Diseño del recurso web
         +
-Preparación para implementación
+Preparación para la implementación
 ```
 
 Los productos tecnológicos construidos durante la unidad deben considerarse:
 
 > prototipos pedagógicos, no aplicaciones institucionales terminadas.
+
+El repositorio diferencia entre:
+
+- la unidad didáctica actual;
+- el recurso web que apoyará su implementación;
+- la investigación y sistematización;
+- una posible aplicación futura.
+
+---
+
+## Alcance actual
+
+La fase actual incluye:
+
+- documentación del proyecto;
+- arquitectura pedagógica;
+- planeación de la unidad;
+- recursos lingüísticos;
+- criterios de privacidad;
+- criterios de accesibilidad;
+- historias de usuario del recurso web;
+- hoja de ruta;
+- diseño del recurso web estático;
+- preparación de prototipos pedagógicos.
+
+---
+
+## Fuera del alcance actual
+
+La fase actual no contempla:
+
+- una aplicación institucional terminada;
+- gestión de casos de convivencia;
+- recepción de denuncias;
+- almacenamiento de testimonios;
+- seguimiento de estudiantes;
+- automatización de decisiones;
+- análisis emocional;
+- clasificación de conducta;
+- sistemas disciplinarios;
+- conexión directa con servicios externos de IA.
 
 ---
 
@@ -205,7 +254,6 @@ El recurso y los prototipos no deben incluir:
 - reconocimiento facial o de voz;
 - recomendaciones disciplinarias;
 - envío automático de reportes;
-- conexión directa con servicios externos de IA;
 - publicación automática.
 
 ---
@@ -225,7 +273,12 @@ Por esta razón:
 - las situaciones sensibles deben atenderse mediante rutas institucionales;
 - los productos deben revisarse antes de socializarse.
 
-El proyecto no funciona como canal de denuncias ni como sistema de gestión de convivencia.
+El proyecto no funciona como:
+
+- canal de denuncias;
+- sistema de gestión de convivencia;
+- mecanismo disciplinario;
+- herramienta de diagnóstico psicológico.
 
 ---
 
@@ -270,8 +323,6 @@ No se valora únicamente:
 
 Todas las actividades deben tener una opción sin internet.
 
-Ejemplos:
-
 | Actividad digital | Alternativa desconectada |
 |---|---|
 | Uso de IA | Simulación mediante roles |
@@ -305,7 +356,8 @@ Se prioriza una arquitectura:
 - accesible;
 - mantenible;
 - sin recopilación de datos;
-- compatible con navegación local.
+- compatible con navegación local;
+- con alternativas imprimibles.
 
 ---
 
@@ -313,35 +365,115 @@ Se prioriza una arquitectura:
 
 ```text
 .
-├── README.md
-├── PEDAGOGICAL_FRAMEWORK.md
-├── DESIGN_SYSTEM.md
-├── DESIGN_DECISIONS.md
-├── CONTENT_GUIDELINES.md
-├── PRIVACY.md
+├── docs/
+├── future-app/
+├── knowledge/
+├── research/
 ├── ACCESSIBILITY.md
-├── CONTRIBUTING.md
 ├── CHANGELOG.md
-└── knowledge/
-    ├── README.md
-    ├── KNOWLEDGE_ARCHITECTURE.md
-    ├── 00_PROJECT_OVERVIEW.md
-    ├── 01_CONTEXT.md
-    ├── 02_TRANSFER_FROM_KOREA.md
-    ├── 03_TARGET_POPULATION.md
-    ├── unit/
-    ├── moments/
-    ├── pedagogy/
-    ├── language/
-    ├── prompts/
-    └── data/
+├── CONTENT_GUIDELINES.md
+├── CONTRIBUTING.md
+├── DESIGN_DECISIONS.md
+├── DESIGN_SYSTEM.md
+├── PEDAGOGICAL_FRAMEWORK.md
+├── PRIVACY.md
+├── PROJECT_BRIEF.md
+├── README.md
+├── ROADMAP.md
+└── USER_STORIES.md
 ```
 
 ---
 
-## Base de conocimiento
+## Organización del repositorio
 
-La carpeta `knowledge/` contiene la documentación pedagógica detallada.
+### `docs/`
+
+Contiene o contendrá el recurso web estático que podrá publicarse mediante GitHub Pages.
+
+Su función es alojar elementos como:
+
+```text
+docs/
+├── README.md
+├── index.html
+├── assets/
+├── css/
+├── data/
+└── js/
+```
+
+La estructura interna puede ampliarse durante el desarrollo, pero cualquier cambio importante debe registrarse en `DESIGN_DECISIONS.md`.
+
+---
+
+### `future-app/`
+
+Contiene la documentación conceptual relacionada con una posible aplicación futura.
+
+Esta carpeta no representa una aplicación aprobada ni terminada.
+
+Puede incluir:
+
+- necesidades identificadas;
+- requisitos propuestos;
+- prototipos;
+- preguntas abiertas;
+- riesgos;
+- criterios institucionales;
+- recomendaciones derivadas de la implementación.
+
+No debe contener datos reales de estudiantes ni funciones de gestión de casos.
+
+---
+
+### `knowledge/`
+
+Contiene la fuente pedagógica detallada del proyecto.
+
+Su estructura principal es:
+
+```text
+knowledge/
+├── README.md
+├── KNOWLEDGE_ARCHITECTURE.md
+├── 00_PROJECT_OVERVIEW.md
+├── 01_CONTEXT.md
+├── 02_TRANSFER_FROM_KOREA.md
+├── 03_TARGET_POPULATION.md
+├── unit/
+├── moments/
+├── pedagogy/
+├── language/
+├── prompts/
+└── data/
+```
+
+---
+
+### `research/`
+
+Contiene o contendrá la documentación relacionada con:
+
+- implementación;
+- observación pedagógica;
+- instrumentos;
+- sistematización;
+- evaluación del prototipo;
+- resultados anonimizados;
+- recomendaciones.
+
+No debe contener:
+
+- nombres de estudiantes;
+- bases de datos identificables;
+- testimonios sensibles;
+- fotografías no autorizadas;
+- información disciplinaria.
+
+---
+
+## Base de conocimiento
 
 ### Información general
 
@@ -351,6 +483,13 @@ knowledge/01_CONTEXT.md
 knowledge/02_TRANSFER_FROM_KOREA.md
 knowledge/03_TARGET_POPULATION.md
 ```
+
+Estos documentos presentan:
+
+- visión general;
+- contexto;
+- transferencia desde Corea;
+- población participante.
 
 ### Unidad didáctica
 
@@ -367,19 +506,26 @@ Incluye:
 - objetivos;
 - competencias;
 - aprendizajes esperados;
-- enfoques;
+- enfoque transversal;
 - interdisciplinariedad;
 - cronograma;
 - recursos;
 - referencias.
 
-### Momentos
+### Momentos de aprendizaje
 
 ```text
 knowledge/moments/
 ```
 
-Incluye la planeación detallada de los cuatro momentos y las dieciséis sesiones.
+Incluye la planeación detallada de:
+
+- cuatro momentos;
+- dieciséis sesiones;
+- productos;
+- evidencias;
+- alternativas desconectadas;
+- criterios de protección.
 
 ### Pedagogía
 
@@ -415,9 +561,10 @@ knowledge/prompts/
 
 Incluye:
 
-- orientaciones de seguridad;
-- prompts educativos para Gemini;
-- prompts para Vibe Coding.
+- orientaciones para Gemini;
+- criterios de seguridad;
+- prompts para Vibe Coding;
+- procedimientos de revisión.
 
 ### Datos estructurados
 
@@ -425,20 +572,170 @@ Incluye:
 knowledge/data/unit-content.json
 ```
 
-Contiene una representación estructurada de los contenidos principales para facilitar el desarrollo web.
+Contiene una representación estructurada de los contenidos principales para facilitar el desarrollo del recurso web.
 
 ---
 
-## Fuentes de contenido
+## Documentos estratégicos
 
-La documentación pedagógica en Markdown es la fuente principal para:
+### `PROJECT_BRIEF.md`
 
-- decisiones pedagógicas;
+Define:
+
+- problema;
+- contexto;
+- usuarios;
+- propósito;
+- alcance;
+- exclusiones;
+- entregables;
+- criterios de éxito;
+- restricciones;
+- riesgos.
+
+Responde principalmente:
+
+> ¿Qué es el proyecto, por qué existe y qué busca producir?
+
+### `ROADMAP.md`
+
+Organiza:
+
+- fases;
+- prioridades;
+- hitos;
+- dependencias;
+- próximos pasos;
+- condiciones para avanzar.
+
+Responde principalmente:
+
+> ¿En qué orden debe desarrollarse el proyecto?
+
+### `USER_STORIES.md`
+
+Traduce las necesidades del recurso web en historias de usuario y criterios de aceptación.
+
+Incluye necesidades de:
+
+- estudiantes;
+- docentes;
+- visitantes;
+- colaboradores;
+- usuarios con requerimientos de accesibilidad.
+
+Responde principalmente:
+
+> ¿Qué necesita hacer cada usuario y cómo sabremos que la función responde adecuadamente?
+
+Las historias contenidas en `USER_STORIES.md` corresponden al producto web.
+
+No deben confundirse con las historias de usuario que los estudiantes elaboran como actividad pedagógica dentro de la unidad.
+
+---
+
+## Documentos pedagógicos, técnicos y éticos
+
+| Documento | Función |
+|---|---|
+| `PEDAGOGICAL_FRAMEWORK.md` | Define los principios pedagógicos generales |
+| `DESIGN_SYSTEM.md` | Establece criterios visuales, componentes e interacción |
+| `DESIGN_DECISIONS.md` | Registra decisiones pedagógicas, éticas y técnicas |
+| `CONTENT_GUIDELINES.md` | Define reglas para redactar, traducir, revisar y publicar contenidos |
+| `PRIVACY.md` | Define criterios para proteger datos y menores |
+| `ACCESSIBILITY.md` | Establece requisitos de accesibilidad |
+| `CONTRIBUTING.md` | Explica cómo contribuir al repositorio |
+| `CHANGELOG.md` | Registra cambios significativos entre versiones |
+
+---
+
+## Relación entre documentos
+
+La arquitectura documental puede comprenderse así:
+
+```text
+PROJECT_BRIEF.md
+Define el proyecto
+        ↓
+ROADMAP.md
+Organiza sus fases
+        ↓
+USER_STORIES.md
+Traduce necesidades en funciones
+        ↓
+PEDAGOGICAL_FRAMEWORK.md
+Orienta el sentido educativo
+        ↓
+CONTENT_GUIDELINES.md
+Orienta la creación y revisión del contenido
+        ↓
+DESIGN_SYSTEM.md
+Orienta la interfaz
+        ↓
+DESIGN_DECISIONS.md
+Registra las decisiones
+        ↓
+docs/
+Implementa el recurso web
+```
+
+La carpeta `knowledge/` funciona como fuente pedagógica detallada durante todo el proceso.
+
+Los documentos `PRIVACY.md` y `ACCESSIBILITY.md` establecen condiciones transversales que deben aplicarse tanto al contenido como al diseño y al desarrollo técnico.
+
+---
+
+## Fuentes de verdad
+
+No todos los documentos cumplen la misma función.
+
+### Fuente pedagógica
+
+Los documentos Markdown de `knowledge/` son la fuente principal para:
+
+- secuencia didáctica;
 - metodología;
 - evaluación;
 - lenguaje;
-- privacidad;
-- secuencia didáctica.
+- productos;
+- actividades.
+
+### Definición estratégica
+
+Los documentos principales son:
+
+```text
+PROJECT_BRIEF.md
+ROADMAP.md
+USER_STORIES.md
+```
+### Reglas de contenido
+
+El documento:
+
+```text
+CONTENT_GUIDELINES.md
+```
+
+define los criterios para:
+
+- redactar instrucciones;
+- crear casos ficticios;
+- utilizar lenguaje restaurativo;
+- traducir contenidos;
+- revisar materiales generados con IA;
+- publicar imágenes, mensajes y recursos;
+- mantener consistencia terminológica.
+  
+### Decisiones vigentes
+
+Las decisiones aceptadas deben registrarse en:
+
+```text
+DESIGN_DECISIONS.md
+```
+
+### Capa de datos
 
 El archivo:
 
@@ -446,31 +743,53 @@ El archivo:
 knowledge/data/unit-content.json
 ```
 
-funciona como capa de datos para la interfaz.
+funciona como representación estructurada para la interfaz.
 
-Cuando exista una contradicción, deben revisarse primero los documentos pedagógicos y después actualizarse los datos y la interfaz.
+### Implementación
+
+La carpeta:
+
+```text
+docs/
+```
+
+contiene o contendrá la implementación del recurso web.
+
+---
+
+## Regla de sincronización
+
+Cuando exista una contradicción:
+
+1. identificar el tipo de decisión;
+2. consultar el documento correspondiente;
+3. confirmar cuál contenido está vigente;
+4. actualizar los documentos relacionados;
+5. actualizar `unit-content.json` cuando corresponda;
+6. actualizar la interfaz;
+7. registrar el cambio en `CHANGELOG.md`.
+
+No deben hacerse cambios silenciosos en la arquitectura.
 
 ---
 
 ## Ejecución local
 
-Cuando exista una primera versión web, podrá ejecutarse mediante un servidor local.
-
-Ejemplo con Python:
+Cuando exista una primera versión web en `docs/`, podrá ejecutarse desde la raíz del repositorio mediante:
 
 ```bash
 python -m http.server 8000
 ```
 
-Después puede abrirse:
+Después podrá abrirse:
 
 ```text
-http://localhost:8000
+http://localhost:8000/docs/
 ```
 
-También podrá utilizarse la extensión Live Server en Visual Studio Code o GitHub Codespaces.
+También podrá utilizarse Live Server en Visual Studio Code o GitHub Codespaces.
 
-Las instrucciones definitivas deberán actualizarse cuando exista la estructura técnica real.
+Las instrucciones deberán ajustarse cuando se confirme la estructura técnica de `docs/`.
 
 ---
 
@@ -482,7 +801,14 @@ Para comprobar la sintaxis del archivo JSON:
 python -m json.tool knowledge/data/unit-content.json
 ```
 
-Para ejecutar la validación desde GitHub, puede utilizarse un Codespace.
+Si el comando termina sin mostrar errores, la sintaxis del archivo es válida.
+
+La validación de sintaxis no garantiza por sí sola que:
+
+- las horas sean correctas;
+- las sesiones estén completas;
+- los contenidos coincidan con Markdown;
+- la interfaz utilice los datos correctamente.
 
 ---
 
@@ -491,15 +817,17 @@ Para ejecutar la validación desde GitHub, puede utilizarse un Codespace.
 Antes de incorporar una función, debe preguntarse:
 
 1. ¿Responde a una necesidad documentada?
-2. ¿Tiene valor pedagógico?
-3. ¿Puede funcionar sin recopilar datos?
-4. ¿Es apropiada para menores?
-5. ¿Es accesible?
-6. ¿Puede utilizarse sin conexión?
-7. ¿Mantiene las decisiones humanas?
-8. ¿Evita vigilancia y clasificación?
-9. ¿Ha sido probada?
-10. ¿Está claramente identificada como prototipo?
+2. ¿Está relacionada con una historia de usuario?
+3. ¿Tiene valor pedagógico?
+4. ¿Puede funcionar sin recopilar datos?
+5. ¿Es apropiada para menores?
+6. ¿Es accesible?
+7. ¿Puede utilizarse sin conexión?
+8. ¿Mantiene las decisiones humanas?
+9. ¿Evita vigilancia y clasificación?
+10. ¿Ha sido probada?
+11. ¿Está claramente identificada como prototipo?
+12. ¿Requiere actualizar otros documentos?
 
 ---
 
@@ -509,33 +837,18 @@ Las contribuciones deben:
 
 - mantener el propósito pedagógico;
 - respetar la privacidad;
-- conservar accesibilidad;
+- conservar la accesibilidad;
 - evitar funciones prohibidas;
 - utilizar contenido ficticio;
 - documentar decisiones;
 - probar cambios;
-- actualizar la documentación relacionada.
+- actualizar los archivos relacionados.
 
 Las orientaciones completas se encuentran en:
 
 ```text
 CONTRIBUTING.md
 ```
-
----
-
-## Documentos principales
-
-| Documento | Función |
-|---|---|
-| `PEDAGOGICAL_FRAMEWORK.md` | Marco pedagógico general |
-| `DESIGN_SYSTEM.md` | Criterios visuales y componentes |
-| `DESIGN_DECISIONS.md` | Registro de decisiones importantes |
-| `CONTENT_GUIDELINES.md` | Reglas para crear y revisar contenido |
-| `PRIVACY.md` | Protección de datos y menores |
-| `ACCESSIBILITY.md` | Requisitos de accesibilidad |
-| `CONTRIBUTING.md` | Orientaciones para contribuir |
-| `CHANGELOG.md` | Registro de cambios |
 
 ---
 
@@ -574,13 +887,14 @@ No debe añadirse una licencia hasta revisar:
 - propiedad de los materiales;
 - uso educativo;
 - publicación de recursos;
-- posibles restricciones sobre productos estudiantiles.
+- recursos de terceros;
+- posibles productos estudiantiles.
 
 ---
 
 ## Advertencia
 
-Este repositorio contiene un diseño pedagógico y prototipos educativos.
+Este repositorio contiene un diseño pedagógico, documentación de producto y prototipos educativos.
 
 No constituye:
 
