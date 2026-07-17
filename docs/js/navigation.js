@@ -41,6 +41,12 @@ const initNavigation = () => {
   navList.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', closeMenu);
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 699) {
+      closeMenu();
+    }
+  });
 };
 
 export { initNavigation };
