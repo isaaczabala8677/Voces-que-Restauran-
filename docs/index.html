@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Prototipo inicial de la unidad didáctica Voces que Restauran, con enfoque en privacidad, accesibilidad y navegación sencilla para GitHub Pages.">
+    <title>Voces que Restauran | Prototipo inicial</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/print.css">
+  </head>
+  <body data-content-path="./data/unit-content.json">
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand-link" href="./index.html">Voces que Restauran</a>
+        <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-list" aria-label="Abrir menú principal">
+          Menú
+        </button>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <ul id="site-nav-list" class="site-nav-list">
+            <li><a href="./index.html" aria-current="page">Inicio</a></li>
+            <li><a href="./moments/">Momentos</a></li>
+            <li><a href="./language/">Lenguaje</a></li>
+            <li><a href="./resources/">Recursos</a></li>
+            <li><a href="./teacher-guide/">Guía docente</a></li>
+            <li><a href="./about/">Acerca del proyecto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero container" aria-labelledby="project-title">
+        <div class="hero__content">
+          <p class="eyebrow">Unidad didáctica interdisciplinaria</p>
+          <h1 id="project-title">Voces que Restauran</h1>
+          <p class="lead">Una propuesta de aprendizaje para fortalecer la convivencia, la escucha y la participación segura con lenguaje restaurativo, tecnología y creatividad.</p>
+          <p class="lead lead--secondary">Pregunta orientadora: ¿Cómo podemos utilizar nuestras voces, el diálogo, el diseño y la tecnología para construir formas más respetuosas y restaurativas de convivencia escolar?</p>
+          <ul class="summary-list" aria-label="Datos generales de la unidad">
+            <li><strong>8 semanas</strong></li>
+            <li><strong>16 sesiones</strong></li>
+            <li><strong>32 horas</strong></li>
+          </ul>
+        </div>
+
+        <div class="notice notice--warning" role="status">
+          <h2>Prototipo</h2>
+          <p>Recurso educativo en fase de prototipo. No recopila datos ni funciona como canal de denuncias o sistema de gestión de convivencia.</p>
+        </div>
+        <div class="notice notice--info" role="note">
+          <h2>Privacidad y seguridad</h2>
+          <p>Utiliza personajes y situaciones ficticias. No escribas nombres, relatos reales ni información personal.</p>
+        </div>
+      </section>
+
+      <section class="container section-block" aria-labelledby="moments-title">
+        <div class="section-heading">
+          <h2 id="moments-title">Momentos de la unidad</h2>
+          <p>Esta vista inicial presenta los cuatro momentos desde los datos estructurados del proyecto.</p>
+        </div>
+        <div id="moments-list" class="card-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="container section-block" aria-labelledby="scope-title">
+        <div class="section-heading">
+          <h2 id="scope-title">Alcance de esta entrega</h2>
+          <p>La entrega 0 prepara la base técnica del recurso: acceso, navegación, estilos, datos y validación.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Base accesible</h3>
+            <p>Se ha preparado una estructura con foco visible, salto de contenido y navegación compatible con teclado.</p>
+          </article>
+          <article class="card">
+            <h3>Privacidad por diseño</h3>
+            <p>No se emplean formularios, datos personales ni servicios externos.</p>
+          </article>
+          <article class="card">
+            <h3>GitHub Pages</h3>
+            <p>El sitio está preparado para servir desde la carpeta docs con rutas relativas.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p><strong>Voces que Restauran</strong></p>
+        <ul class="footer-links">
+          <li>Prototipo pedagógico y educativo.</li>
+          <li>Privacidad y seguridad desde el diseño.</li>
+          <li>Accesibilidad y lenguaje claro.</li>
+          <li>Autoría: proyecto de transferencia pedagógica del Liceo Caucasia.</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
