@@ -1,0 +1,1316 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0.0",
+    "contentVersion": "1.0.0",
+    "language": "es",
+    "supportedLanguages": [
+      "es",
+      "en"
+    ],
+    "status": "pedagogical-prototype",
+    "lastReviewed": null,
+    "containsPersonalData": false,
+    "sourceOfTruth": "knowledge markdown documentation"
+  },
+  "project": {
+    "id": "voces-que-restauran",
+    "title": "Voces que Restauran",
+    "subtitle": "Inteligencia artificial para narrar, reflexionar y construir convivencia escolar",
+    "institution": "Institución Educativa Liceo Caucasia",
+    "location": {
+      "municipality": "Caucasia",
+      "department": "Antioquia",
+      "country": "Colombia"
+    },
+    "projectType": "Unidad Didáctica de Transferencia Pedagógica ICT Corea 2026",
+    "category": "Inteligencia Artificial",
+    "purpose": "Promover la reflexión sobre la convivencia escolar y la cultura de paz mediante el diseño colaborativo de prototipos apoyados en inteligencia artificial generativa, comunicación bilingüe y principios restaurativos.",
+    "guidingQuestion": "¿Cómo podemos utilizar nuestras voces, el diálogo, el diseño y la tecnología para construir formas más respetuosas y restaurativas de convivencia escolar?",
+    "prototypeNotice": "Este recurso corresponde a un prototipo pedagógico. No es una aplicación institucional para registrar, gestionar o resolver conflictos reales.",
+    "totalWeeks": 8,
+    "totalSessions": 16,
+    "hoursPerSession": 2,
+    "totalHours": 32
+  },
+  "targetPopulation": {
+    "ageRange": {
+      "minimum": 11,
+      "maximum": 14
+    },
+    "educationalLevel": "Básica secundaria",
+    "mainGrades": [
+      "6",
+      "7",
+      "8"
+    ],
+    "englishReferenceLevel": "A1-A2",
+    "characteristics": [
+      "Diferentes niveles de dominio del inglés",
+      "Diversidad de experiencias tecnológicas",
+      "Necesidad de apoyos visuales y lingüísticos",
+      "Aprendizaje mediante colaboración, diseño y participación",
+      "Requerimiento de protección reforzada por tratarse de menores de edad"
+    ],
+    "participationRights": [
+      "Participar de manera oral, escrita, gráfica o colaborativa",
+      "Solicitar ayuda",
+      "Utilizar apoyos lingüísticos",
+      "Pasar un turno de palabra",
+      "No compartir experiencias personales",
+      "Recibir instrucciones comprensibles",
+      "Participar sin entregar datos personales"
+    ]
+  },
+  "pedagogicalPrinciples": [
+    {
+      "id": "situated-learning",
+      "title": "Aprendizaje situado",
+      "description": "Los aprendizajes se relacionan con necesidades generales del contexto escolar sin recopilar casos identificables."
+    },
+    {
+      "id": "student-voice",
+      "title": "Voz y participación estudiantil",
+      "description": "Los estudiantes participan en la identificación de necesidades, el diseño, la prueba y la formulación de recomendaciones."
+    },
+    {
+      "id": "restorative-approach",
+      "title": "Enfoque restaurativo",
+      "description": "Se priorizan comprensión, efectos, necesidades, responsabilidad, reparación y prevención."
+    },
+    {
+      "id": "peace-culture",
+      "title": "Cultura de paz",
+      "description": "La paz se aborda mediante escucha, dignidad, inclusión, diálogo, justicia, participación y cuidado."
+    },
+    {
+      "id": "interdisciplinarity",
+      "title": "Interdisciplinariedad",
+      "description": "La unidad articula inglés, convivencia y tecnología alrededor de productos comunes."
+    },
+    {
+      "id": "ethical-ai",
+      "title": "Uso ético y crítico de IA",
+      "description": "Las respuestas generadas deben revisarse y las decisiones importantes deben permanecer en manos humanas."
+    },
+    {
+      "id": "privacy-by-design",
+      "title": "Privacidad desde el diseño",
+      "description": "Los prototipos deben funcionar sin solicitar, enviar o almacenar información personal."
+    },
+    {
+      "id": "accessibility",
+      "title": "Accesibilidad",
+      "description": "Las actividades y recursos deben ofrecer distintas formas de participación y alternativas desconectadas."
+    },
+    {
+      "id": "formative-assessment",
+      "title": "Evaluación formativa",
+      "description": "La evaluación utiliza evidencias, retroalimentación, revisión, autoevaluación y coevaluación."
+    }
+  ],
+  "interdisciplinaryAreas": [
+    {
+      "id": "english",
+      "name": "Inglés",
+      "contributions": [
+        "Expresión de emociones y necesidades",
+        "Escucha y desacuerdo respetuoso",
+        "Mensajes bilingües",
+        "Presentación de prototipos",
+        "Uso funcional de vocabulario A1-A2"
+      ]
+    },
+    {
+      "id": "ethics-social-sciences",
+      "name": "Ética, convivencia y ciencias sociales",
+      "contributions": [
+        "Comprensión de la convivencia",
+        "Reconocimiento de perspectivas",
+        "Lenguaje restaurativo",
+        "Responsabilidad y reparación",
+        "Cultura de paz y participación"
+      ]
+    },
+    {
+      "id": "technology",
+      "name": "Tecnología e informática",
+      "contributions": [
+        "Ciudadanía digital",
+        "Alfabetización en inteligencia artificial",
+        "Pensamiento computacional",
+        "Diseño y prototipado",
+        "Prompts y Vibe Coding",
+        "Prueba y mejora de soluciones"
+      ]
+    }
+  ],
+  "learningMoments": [
+    {
+      "id": "moment-1",
+      "order": 1,
+      "title": "Inspirar y conectar",
+      "durationHours": 4,
+      "weeks": [
+        1
+      ],
+      "sessionIds": [
+        "session-01",
+        "session-02"
+      ],
+      "guidingQuestion": "¿Qué nos dicen los espacios, las relaciones, las emociones y las voces que forman parte de nuestra escuela?",
+      "purpose": "Reconocer la escuela como un espacio de relaciones, emociones, historias y formas de convivencia, estableciendo condiciones de participación segura.",
+      "keyConcepts": [
+        "voz",
+        "escucha",
+        "convivencia",
+        "participación",
+        "privacidad",
+        "necesidades escolares"
+      ],
+      "products": [
+        "Acuerdos de cuidado, respeto y privacidad",
+        "Mapa colectivo de voces, emociones y convivencia",
+        "Glosario bilingüe inicial",
+        "Lista inicial de necesidades"
+      ],
+      "sessions": [
+        {
+          "id": "session-01",
+          "number": 1,
+          "title": "Nuestras voces cuentan",
+          "durationHours": 2,
+          "purpose": "Presentar la unidad, explorar ideas iniciales y construir acuerdos para participar de manera segura.",
+          "mainActivities": [
+            "Exploración del significado de voz, escucha y restauración",
+            "Actividad diagnóstica",
+            "Presentación del reto",
+            "Círculo inicial de palabra",
+            "Construcción de acuerdos",
+            "Expresiones bilingües de participación"
+          ],
+          "evidence": [
+            "Respuestas diagnósticas",
+            "Acuerdos colectivos",
+            "Tarjetas bilingües",
+            "Reflexión de salida"
+          ],
+          "englishExpressions": [
+            {
+              "en": "My voice matters.",
+              "es": "Mi voz importa."
+            },
+            {
+              "en": "Please listen.",
+              "es": "Por favor, escucha."
+            },
+            {
+              "en": "I think...",
+              "es": "Pienso que..."
+            },
+            {
+              "en": "I disagree respectfully.",
+              "es": "No estoy de acuerdo, con respeto."
+            }
+          ]
+        },
+        {
+          "id": "session-02",
+          "number": 2,
+          "title": "Mi escuela también habla",
+          "durationHours": 2,
+          "purpose": "Observar y representar la escuela como un espacio de convivencia sin registrar personas o situaciones identificables.",
+          "mainActivities": [
+            "Observación de espacios escolares",
+            "Identificación de emociones y prácticas",
+            "Construcción del mapa de convivencia",
+            "Galería de perspectivas",
+            "Identificación de necesidades"
+          ],
+          "evidence": [
+            "Ficha de observación",
+            "Mapa de convivencia",
+            "Lista de necesidades",
+            "Vocabulario bilingüe"
+          ],
+          "englishExpressions": [
+            {
+              "en": "This place feels safe.",
+              "es": "Este lugar se siente seguro."
+            },
+            {
+              "en": "We need more respect.",
+              "es": "Necesitamos más respeto."
+            },
+            {
+              "en": "This space needs care.",
+              "es": "Este espacio necesita cuidado."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moment-2",
+      "order": 2,
+      "title": "Comprender",
+      "durationHours": 8,
+      "weeks": [
+        2,
+        3
+      ],
+      "sessionIds": [
+        "session-03",
+        "session-04",
+        "session-05",
+        "session-06"
+      ],
+      "guidingQuestion": "¿Cómo podemos comprender mejor lo que ocurre en un conflicto, reconocer emociones y necesidades, y utilizar la inteligencia artificial de manera responsable?",
+      "purpose": "Construir conceptos y herramientas para analizar situaciones ficticias, formular preguntas restaurativas y revisar críticamente respuestas de inteligencia artificial.",
+      "keyConcepts": [
+        "emociones",
+        "necesidades",
+        "perspectivas",
+        "hechos",
+        "interpretaciones",
+        "conflicto",
+        "daño",
+        "responsabilidad",
+        "reparación",
+        "inteligencia artificial",
+        "sesgo",
+        "privacidad"
+      ],
+      "products": [
+        "Glosario bilingüe de emociones y convivencia",
+        "Mapa de perspectivas",
+        "Banco de preguntas restaurativas",
+        "Propuestas de reparación",
+        "Decálogo de uso responsable de IA",
+        "Primer banco de prompts seguros"
+      ],
+      "sessions": [
+        {
+          "id": "session-03",
+          "number": 3,
+          "title": "Lo que sentimos también comunica",
+          "durationHours": 2,
+          "purpose": "Reconocer emociones y necesidades, diferenciando emoción, pensamiento y acción.",
+          "mainActivities": [
+            "Rueda de emociones",
+            "Relación entre emoción, pensamiento, necesidad y acción",
+            "Análisis de personajes ficticios",
+            "Construcción de glosario"
+          ],
+          "evidence": [
+            "Ficha de emociones",
+            "Análisis de caso",
+            "Glosario bilingüe",
+            "Reflexión"
+          ],
+          "englishExpressions": [
+            {
+              "en": "I feel...",
+              "es": "Me siento..."
+            },
+            {
+              "en": "I need...",
+              "es": "Necesito..."
+            },
+            {
+              "en": "This person may feel...",
+              "es": "Esta persona puede sentirse..."
+            }
+          ]
+        },
+        {
+          "id": "session-04",
+          "number": 4,
+          "title": "Un conflicto, diferentes perspectivas",
+          "durationHours": 2,
+          "purpose": "Diferenciar tipos de situaciones y analizar hechos, interpretaciones, efectos y perspectivas.",
+          "mainActivities": [
+            "Clasificación de situaciones",
+            "Diferenciación entre hechos e interpretaciones",
+            "Mapa de perspectivas",
+            "Práctica de escucha activa"
+          ],
+          "evidence": [
+            "Clasificación de situaciones",
+            "Mapa de perspectivas",
+            "Preguntas de comprensión",
+            "Expresiones de escucha"
+          ],
+          "englishExpressions": [
+            {
+              "en": "What I understood is...",
+              "es": "Lo que comprendí es..."
+            },
+            {
+              "en": "Can you explain?",
+              "es": "¿Puedes explicar?"
+            },
+            {
+              "en": "We need more information.",
+              "es": "Necesitamos más información."
+            }
+          ]
+        },
+        {
+          "id": "session-05",
+          "number": 5,
+          "title": "Preguntas que ayudan a restaurar",
+          "durationHours": 2,
+          "purpose": "Diferenciar castigo y reparación, y formular preguntas restaurativas.",
+          "mainActivities": [
+            "Comparación de respuestas punitivas y restaurativas",
+            "Exploración de preguntas restaurativas",
+            "Transformación de preguntas acusatorias",
+            "Propuestas de reparación"
+          ],
+          "evidence": [
+            "Banco de preguntas",
+            "Actividad comparativa",
+            "Propuesta de reparación",
+            "Expresiones bilingües"
+          ],
+          "englishExpressions": [
+            {
+              "en": "Who was affected?",
+              "es": "¿Quién fue afectado?"
+            },
+            {
+              "en": "What can we do to help?",
+              "es": "¿Qué podemos hacer para ayudar?"
+            },
+            {
+              "en": "I take responsibility.",
+              "es": "Asumo responsabilidad."
+            }
+          ]
+        },
+        {
+          "id": "session-06",
+          "number": 6,
+          "title": "Inteligencia artificial: posibilidades, errores y cuidados",
+          "durationHours": 2,
+          "purpose": "Comprender posibilidades y limitaciones de la IA, reconocer datos que no deben compartirse y formular un primer prompt seguro.",
+          "mainActivities": [
+            "Exploración de ideas previas",
+            "Explicación de IA generativa",
+            "Clasificación de datos",
+            "Revisión de una respuesta de IA",
+            "Comparación de prompts",
+            "Introducción al Vibe Coding"
+          ],
+          "evidence": [
+            "Clasificación de datos",
+            "Ficha de revisión",
+            "Primer prompt seguro",
+            "Reflexión sobre responsabilidad humana"
+          ],
+          "englishExpressions": [
+            {
+              "en": "AI can make mistakes.",
+              "es": "La IA puede cometer errores."
+            },
+            {
+              "en": "We must review the response.",
+              "es": "Debemos revisar la respuesta."
+            },
+            {
+              "en": "Do not share personal data.",
+              "es": "No compartas datos personales."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moment-3",
+      "order": 3,
+      "title": "Aplicar y crear",
+      "durationHours": 12,
+      "weeks": [
+        4,
+        5,
+        6
+      ],
+      "sessionIds": [
+        "session-07",
+        "session-08",
+        "session-09",
+        "session-10",
+        "session-11",
+        "session-12"
+      ],
+      "guidingQuestion": "¿Cómo podemos transformar una necesidad de convivencia en una propuesta tecnológica segura, útil y creada con participación estudiantil?",
+      "purpose": "Diseñar colaborativamente una propuesta mediante definición de necesidades, historias de usuario, prototipos, prompts y experimentación inicial con Vibe Coding.",
+      "keyConcepts": [
+        "problema",
+        "necesidad",
+        "usuario",
+        "historia de usuario",
+        "función",
+        "diagrama de flujo",
+        "prototipo",
+        "prompt",
+        "Vibe Coding",
+        "prueba",
+        "iteración",
+        "accesibilidad"
+      ],
+      "products": [
+        "Definición del problema",
+        "Pregunta de diseño",
+        "Historias de usuario",
+        "Matriz de priorización",
+        "Diagrama de flujo",
+        "Mapa de navegación",
+        "Prototipo en papel",
+        "Prompt de Vibe Coding",
+        "Prototipo digital inicial o simulación",
+        "Registro de pruebas"
+      ],
+      "sessions": [
+        {
+          "id": "session-07",
+          "number": 7,
+          "title": "¿Qué necesidad queremos atender?",
+          "durationHours": 2,
+          "purpose": "Seleccionar y delimitar una necesidad que pueda abordarse pedagógica y tecnológicamente.",
+          "mainActivities": [
+            "Diferenciación entre problema, necesidad y solución",
+            "Recuperación de hallazgos",
+            "Matriz de priorización",
+            "Formulación del problema",
+            "Pregunta de diseño",
+            "Asignación de roles"
+          ],
+          "evidence": [
+            "Necesidad priorizada",
+            "Definición del problema",
+            "Pregunta de diseño",
+            "Roles del equipo"
+          ]
+        },
+        {
+          "id": "session-08",
+          "number": 8,
+          "title": "Historias de usuario y alternativas",
+          "durationHours": 2,
+          "purpose": "Comprender necesidades desde la perspectiva de usuarios generales y comparar alternativas.",
+          "mainActivities": [
+            "Definición de usuarios",
+            "Historias de usuario",
+            "Generación de alternativas",
+            "Revisión ética de funciones",
+            "Matriz de selección"
+          ],
+          "evidence": [
+            "Historias de usuario",
+            "Alternativas",
+            "Funciones seleccionadas",
+            "Funciones descartadas",
+            "Matriz de selección"
+          ],
+          "englishExpressions": [
+            {
+              "en": "Our user is...",
+              "es": "Nuestro usuario es..."
+            },
+            {
+              "en": "The user needs...",
+              "es": "El usuario necesita..."
+            },
+            {
+              "en": "This function is risky.",
+              "es": "Esta función es riesgosa."
+            }
+          ]
+        },
+        {
+          "id": "session-09",
+          "number": 9,
+          "title": "Del recorrido al boceto",
+          "durationHours": 2,
+          "purpose": "Representar el funcionamiento mediante secuencias, diagramas, navegación y bocetos.",
+          "mainActivities": [
+            "Actividad desconectada de instrucciones",
+            "Descomposición de la propuesta",
+            "Diagrama de flujo",
+            "Mapa de navegación",
+            "Bocetos",
+            "Prueba rápida"
+          ],
+          "evidence": [
+            "Secuencia",
+            "Diagrama de flujo",
+            "Mapa de navegación",
+            "Bocetos"
+          ]
+        },
+        {
+          "id": "session-10",
+          "number": 10,
+          "title": "Prototipo en papel",
+          "durationHours": 2,
+          "purpose": "Construir y probar una representación tangible antes de generar código.",
+          "mainActivities": [
+            "Construcción del prototipo",
+            "Simulación de uso",
+            "Lista de cotejo",
+            "Primera mejora"
+          ],
+          "evidence": [
+            "Prototipo en papel",
+            "Registro de prueba",
+            "Lista de cotejo",
+            "Versión mejorada"
+          ]
+        },
+        {
+          "id": "session-11",
+          "number": 11,
+          "title": "Construcción y mejora de prompts",
+          "durationHours": 2,
+          "purpose": "Transformar decisiones de diseño en instrucciones claras, contextualizadas y seguras.",
+          "mainActivities": [
+            "Comparación de prompts",
+            "Escritura del prompt",
+            "Revisión entre equipos",
+            "Prueba supervisada",
+            "Mejora del prompt"
+          ],
+          "evidence": [
+            "Prompt inicial",
+            "Retroalimentación",
+            "Resultado generado",
+            "Prompt revisado"
+          ]
+        },
+        {
+          "id": "session-12",
+          "number": 12,
+          "title": "Experimentación con Vibe Coding",
+          "durationHours": 2,
+          "purpose": "Generar o analizar una versión digital inicial, identificar errores y solicitar ajustes.",
+          "mainActivities": [
+            "Demostración del proceso",
+            "Generación de versión inicial",
+            "Prueba guiada",
+            "Registro de errores",
+            "Solicitud de cambios",
+            "Comparación de versiones"
+          ],
+          "evidence": [
+            "Prototipo digital o simulación",
+            "Registro de errores",
+            "Solicitud de ajuste",
+            "Comparación de versiones"
+          ],
+          "prototypeConstraints": [
+            "Sin autenticación",
+            "Sin cuentas",
+            "Sin bases de datos",
+            "Sin almacenamiento",
+            "Sin formularios con envío",
+            "Sin conexión con APIs",
+            "Sin datos personales"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moment-4",
+      "order": 4,
+      "title": "Compartir y transformar",
+      "durationHours": 8,
+      "weeks": [
+        7,
+        8
+      ],
+      "sessionIds": [
+        "session-13",
+        "session-14",
+        "session-15",
+        "session-16"
+      ],
+      "guidingQuestion": "¿Cómo podemos compartir, evaluar y mejorar nuestras propuestas para que contribuyan de manera segura y significativa a la convivencia escolar?",
+      "purpose": "Probar, mejorar y socializar prototipos, crear mensajes bilingües y formular recomendaciones para una fase futura.",
+      "keyConcepts": [
+        "prueba de usuario",
+        "observación",
+        "retroalimentación",
+        "rediseño",
+        "argumentación",
+        "socialización",
+        "campaña",
+        "autoevaluación",
+        "cocreación"
+      ],
+      "products": [
+        "Protocolo de prueba",
+        "Fichas de retroalimentación",
+        "Matriz de cambios",
+        "Prototipo mejorado",
+        "Presentación",
+        "Campaña bilingüe",
+        "Autoevaluación",
+        "Recomendaciones futuras"
+      ],
+      "sessions": [
+        {
+          "id": "session-13",
+          "number": 13,
+          "title": "Laboratorio de usuarios",
+          "durationHours": 2,
+          "purpose": "Probar los prototipos y recoger retroalimentación segura.",
+          "mainActivities": [
+            "Acuerdos de prueba",
+            "Preparación del protocolo",
+            "Prueba por estaciones",
+            "Observación",
+            "Retroalimentación",
+            "Análisis inicial"
+          ],
+          "evidence": [
+            "Protocolo",
+            "Fichas de observación",
+            "Retroalimentación",
+            "Lista inicial de cambios"
+          ]
+        },
+        {
+          "id": "session-14",
+          "number": 14,
+          "title": "Rediseño y preparación de la presentación",
+          "durationHours": 2,
+          "purpose": "Priorizar cambios, mejorar el prototipo y preparar su comunicación.",
+          "mainActivities": [
+            "Organización de retroalimentación",
+            "Matriz de priorización",
+            "Rediseño",
+            "Registro de cambios",
+            "Preparación de presentación"
+          ],
+          "evidence": [
+            "Matriz de cambios",
+            "Prototipo mejorado",
+            "Registro de decisiones",
+            "Guion de presentación"
+          ],
+          "englishExpressions": [
+            {
+              "en": "We changed...",
+              "es": "Cambiamos..."
+            },
+            {
+              "en": "We learned that...",
+              "es": "Aprendimos que..."
+            },
+            {
+              "en": "This is a prototype, not a final app.",
+              "es": "Este es un prototipo, no una aplicación final."
+            }
+          ]
+        },
+        {
+          "id": "session-15",
+          "number": 15,
+          "title": "Feria de prototipos y voces",
+          "durationHours": 2,
+          "purpose": "Socializar los prototipos, argumentar decisiones y documentar recomendaciones.",
+          "mainActivities": [
+            "Organización de estaciones",
+            "Presentación de equipos",
+            "Preguntas del público",
+            "Retroalimentación",
+            "Registro de recomendaciones"
+          ],
+          "evidence": [
+            "Presentación",
+            "Prototipo final de la unidad",
+            "Retroalimentación",
+            "Recomendaciones de cocreación"
+          ]
+        },
+        {
+          "id": "session-16",
+          "number": 16,
+          "title": "Campaña bilingüe y cierre restaurativo",
+          "durationHours": 2,
+          "purpose": "Sintetizar aprendizajes, crear mensajes de convivencia y formular compromisos.",
+          "mainActivities": [
+            "Galería de productos",
+            "Campaña bilingüe",
+            "Autoevaluación",
+            "Coevaluación",
+            "Círculo de cierre",
+            "Compromiso colectivo"
+          ],
+          "evidence": [
+            "Campaña bilingüe",
+            "Autoevaluación",
+            "Coevaluación",
+            "Compromiso",
+            "Reflexión final"
+          ]
+        }
+      ]
+    }
+  ],
+  "languageResources": {
+    "referenceLevel": "A1-A2",
+    "principles": [
+      "Uso funcional del inglés",
+      "Modelado y apoyos visuales",
+      "Flexibilidad entre español e inglés",
+      "Valoración de la intención comunicativa",
+      "No exigir memorización de todas las expresiones"
+    ],
+    "priorityCategories": [
+      "emotions",
+      "needs",
+      "active-listening",
+      "respectful-disagreement",
+      "restorative-questions",
+      "teamwork",
+      "privacy",
+      "artificial-intelligence",
+      "design",
+      "feedback",
+      "presentation",
+      "reflection"
+    ],
+    "keyExpressions": [
+      {
+        "id": "voice-matters",
+        "category": "active-listening",
+        "en": "My voice matters.",
+        "es": "Mi voz importa."
+      },
+      {
+        "id": "please-listen",
+        "category": "active-listening",
+        "en": "Please listen.",
+        "es": "Por favor, escucha."
+      },
+      {
+        "id": "i-feel",
+        "category": "emotions",
+        "en": "I feel...",
+        "es": "Me siento..."
+      },
+      {
+        "id": "i-need",
+        "category": "needs",
+        "en": "I need...",
+        "es": "Necesito..."
+      },
+      {
+        "id": "disagree-respectfully",
+        "category": "respectful-disagreement",
+        "en": "I disagree respectfully.",
+        "es": "No estoy de acuerdo, con respeto."
+      },
+      {
+        "id": "who-was-affected",
+        "category": "restorative-questions",
+        "en": "Who was affected?",
+        "es": "¿Quién fue afectado?"
+      },
+      {
+        "id": "what-can-we-learn",
+        "category": "restorative-questions",
+        "en": "What can we learn?",
+        "es": "¿Qué podemos aprender?"
+      },
+      {
+        "id": "work-together",
+        "category": "teamwork",
+        "en": "Let us work together.",
+        "es": "Trabajemos juntos."
+      },
+      {
+        "id": "protect-data",
+        "category": "privacy",
+        "en": "Protect your personal data.",
+        "es": "Protege tus datos personales."
+      },
+      {
+        "id": "ai-mistakes",
+        "category": "artificial-intelligence",
+        "en": "AI can make mistakes.",
+        "es": "La IA puede cometer errores."
+      },
+      {
+        "id": "review-response",
+        "category": "artificial-intelligence",
+        "en": "We must review the response.",
+        "es": "Debemos revisar la respuesta."
+      },
+      {
+        "id": "our-user",
+        "category": "design",
+        "en": "Our user is...",
+        "es": "Nuestro usuario es..."
+      },
+      {
+        "id": "one-strength",
+        "category": "feedback",
+        "en": "One strength is...",
+        "es": "Una fortaleza es..."
+      },
+      {
+        "id": "we-changed",
+        "category": "presentation",
+        "en": "We changed...",
+        "es": "Cambiamos..."
+      },
+      {
+        "id": "i-learned",
+        "category": "reflection",
+        "en": "I learned...",
+        "es": "Aprendí..."
+      }
+    ]
+  },
+  "restorativeFramework": {
+    "sequence": [
+      {
+        "order": 1,
+        "id": "understand",
+        "title": "Comprender lo ocurrido",
+        "question": {
+          "es": "¿Qué ocurrió?",
+          "en": "What happened?"
+        }
+      },
+      {
+        "order": 2,
+        "id": "perspectives",
+        "title": "Reconocer pensamientos y emociones",
+        "question": {
+          "es": "¿Cómo pudieron sentirse las personas?",
+          "en": "How might the people have felt?"
+        }
+      },
+      {
+        "order": 3,
+        "id": "impact",
+        "title": "Identificar efectos",
+        "question": {
+          "es": "¿Quiénes fueron afectados?",
+          "en": "Who was affected?"
+        }
+      },
+      {
+        "order": 4,
+        "id": "needs",
+        "title": "Reconocer necesidades",
+        "question": {
+          "es": "¿Qué se necesita ahora?",
+          "en": "What is needed now?"
+        }
+      },
+      {
+        "order": 5,
+        "id": "responsibility",
+        "title": "Asumir responsabilidad",
+        "question": {
+          "es": "¿Qué responsabilidad puede asumirse?",
+          "en": "What responsibility can be taken?"
+        }
+      },
+      {
+        "order": 6,
+        "id": "repair",
+        "title": "Pensar en reparación",
+        "question": {
+          "es": "¿Qué podría ayudar a reparar?",
+          "en": "What could help repair the situation?"
+        }
+      },
+      {
+        "order": 7,
+        "id": "prevention",
+        "title": "Aprender y prevenir",
+        "question": {
+          "es": "¿Qué podemos aprender y cambiar?",
+          "en": "What can we learn and change?"
+        }
+      }
+    ],
+    "limitations": [
+      "No se utiliza como interrogatorio",
+      "No exige confesiones",
+      "No determina culpables",
+      "No obliga a pedir perdón",
+      "No reemplaza rutas institucionales",
+      "No se aplica automáticamente a situaciones graves"
+    ]
+  },
+  "assessment": {
+    "approach": [
+      "diagnóstica",
+      "formativa",
+      "continua",
+      "interdisciplinaria",
+      "participativa",
+      "inclusiva",
+      "basada en evidencias"
+    ],
+    "dimensions": [
+      "comprensión conceptual",
+      "comunicación",
+      "aplicación restaurativa",
+      "diseño tecnológico",
+      "ética y ciudadanía digital",
+      "colaboración",
+      "reflexión"
+    ],
+    "assessmentAgents": [
+      "heteroevaluación",
+      "autoevaluación",
+      "coevaluación"
+    ],
+    "commonScale": [
+      {
+        "level": 1,
+        "id": "initial",
+        "label": "Inicial"
+      },
+      {
+        "level": 2,
+        "id": "developing",
+        "label": "En desarrollo"
+      },
+      {
+        "level": 3,
+        "id": "achieved",
+        "label": "Logrado"
+      },
+      {
+        "level": 4,
+        "id": "advanced",
+        "label": "Avanzado"
+      }
+    ],
+    "principles": [
+      "Evaluar para mejorar",
+      "Valorar procesos y productos",
+      "Permitir revisión",
+      "Reconocer diferentes formas de participación",
+      "No evaluar la disposición a compartir experiencias personales",
+      "No delegar la valoración a una inteligencia artificial"
+    ]
+  },
+  "learningProducts": [
+    {
+      "id": "product-agreements",
+      "momentId": "moment-1",
+      "title": "Acuerdos de cuidado, respeto y privacidad",
+      "type": "collective"
+    },
+    {
+      "id": "product-context-map",
+      "momentId": "moment-1",
+      "title": "Mapa de voces, emociones y convivencia",
+      "type": "collective"
+    },
+    {
+      "id": "product-restorative-kit",
+      "momentId": "moment-2",
+      "title": "Kit inicial para comprender y restaurar",
+      "type": "integrated"
+    },
+    {
+      "id": "product-problem-definition",
+      "momentId": "moment-3",
+      "title": "Definición del problema y pregunta de diseño",
+      "type": "team"
+    },
+    {
+      "id": "product-paper-prototype",
+      "momentId": "moment-3",
+      "title": "Prototipo en papel",
+      "type": "team"
+    },
+    {
+      "id": "product-vibe-coding-prompt",
+      "momentId": "moment-3",
+      "title": "Prompt de Vibe Coding",
+      "type": "team"
+    },
+    {
+      "id": "product-initial-digital-prototype",
+      "momentId": "moment-3",
+      "title": "Prototipo digital inicial o simulación",
+      "type": "team"
+    },
+    {
+      "id": "product-improved-prototype",
+      "momentId": "moment-4",
+      "title": "Prototipo mejorado",
+      "type": "team"
+    },
+    {
+      "id": "product-presentation",
+      "momentId": "moment-4",
+      "title": "Presentación del prototipo",
+      "type": "team"
+    },
+    {
+      "id": "product-peace-campaign",
+      "momentId": "moment-4",
+      "title": "Campaña bilingüe de convivencia",
+      "type": "collective"
+    },
+    {
+      "id": "product-future-recommendations",
+      "momentId": "moment-4",
+      "title": "Recomendaciones para la futura aplicación",
+      "type": "collective"
+    }
+  ],
+  "peaceMessages": [
+    {
+      "id": "peace-message-01",
+      "category": "voice",
+      "en": "My voice matters. Your voice matters too.",
+      "es": "Mi voz importa. Tu voz también importa."
+    },
+    {
+      "id": "peace-message-02",
+      "category": "listening",
+      "en": "Listen before you judge.",
+      "es": "Escucha antes de juzgar."
+    },
+    {
+      "id": "peace-message-03",
+      "category": "respect",
+      "en": "Respect builds community.",
+      "es": "El respeto construye comunidad."
+    },
+    {
+      "id": "peace-message-04",
+      "category": "repair",
+      "en": "We can repair our mistakes.",
+      "es": "Podemos reparar nuestros errores."
+    },
+    {
+      "id": "peace-message-05",
+      "category": "dialogue",
+      "en": "Dialogue can transform conflict.",
+      "es": "El diálogo puede transformar los conflictos."
+    },
+    {
+      "id": "peace-message-06",
+      "category": "peace",
+      "en": "Peace begins with the way we speak.",
+      "es": "La paz comienza en la forma en que hablamos."
+    },
+    {
+      "id": "peace-message-07",
+      "category": "digital-citizenship",
+      "en": "Think before you post.",
+      "es": "Piensa antes de publicar."
+    },
+    {
+      "id": "peace-message-08",
+      "category": "privacy",
+      "en": "Protect your personal information.",
+      "es": "Protege tu información personal."
+    },
+    {
+      "id": "peace-message-09",
+      "category": "artificial-intelligence",
+      "en": "AI is a tool, not an authority.",
+      "es": "La IA es una herramienta, no una autoridad."
+    },
+    {
+      "id": "peace-message-10",
+      "category": "design",
+      "en": "Test, listen, and improve.",
+      "es": "Prueba, escucha y mejora."
+    },
+    {
+      "id": "peace-message-11",
+      "category": "participation",
+      "en": "A better school is designed together.",
+      "es": "Una escuela mejor se diseña colectivamente."
+    },
+    {
+      "id": "peace-message-12",
+      "category": "accessibility",
+      "en": "Everyone can participate.",
+      "es": "Todos pueden participar."
+    }
+  ],
+  "privacy": {
+    "principle": "data-minimization",
+    "personalDataCollectionAllowed": false,
+    "studentResponsesStored": false,
+    "authenticationAllowed": false,
+    "publicProfilesAllowed": false,
+    "realConflictRecordsAllowed": false,
+    "requiredPractices": [
+      "Utilizar casos ficticios",
+      "Evitar nombres y datos identificables",
+      "Revisar productos antes de socializarlos",
+      "Solicitar autorización antes de publicar imágenes",
+      "Mantener reflexiones personales fuera de exhibiciones públicas",
+      "Aplicar rutas institucionales cuando aparezca una situación de riesgo"
+    ],
+    "prohibitedData": [
+      "Nombres completos",
+      "Documentos de identidad",
+      "Direcciones",
+      "Teléfonos",
+      "Correos personales",
+      "Contraseñas",
+      "Fotografías identificables",
+      "Información familiar",
+      "Diagnósticos",
+      "Relatos sensibles",
+      "Información disciplinaria",
+      "Datos emocionales individuales"
+    ],
+    "publiclyShareableAfterReview": [
+      "Prototipos anonimizados",
+      "Diagramas",
+      "Mensajes colectivos",
+      "Campañas bilingües",
+      "Casos ficticios",
+      "Recomendaciones generales"
+    ],
+    "notPubliclyShareable": [
+      "Autoevaluaciones personales",
+      "Coevaluaciones individuales",
+      "Relatos",
+      "Conflictos identificables",
+      "Fichas emocionales individuales",
+      "Calificaciones",
+      "Comentarios privados"
+    ]
+  },
+  "technology": {
+    "transferFocus": "Vibe Coding with generative artificial intelligence",
+    "prototypeType": "static educational website",
+    "preferredTechnologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Local JSON",
+      "GitHub Pages"
+    ],
+    "allowedCapabilities": [
+      "Navegación",
+      "Tarjetas informativas",
+      "Filtros locales",
+      "Búsqueda local",
+      "Contenido bilingüe",
+      "Recursos imprimibles",
+      "Copiado local de mensajes",
+      "Diseño responsive"
+    ],
+    "prohibitedCapabilities": [
+      "Autenticación",
+      "Cuentas",
+      "Bases de datos",
+      "localStorage",
+      "sessionStorage",
+      "Cookies de seguimiento",
+      "Analítica",
+      "Formularios con envío",
+      "Carga de archivos",
+      "Conexión directa con APIs de IA",
+      "Puntuaciones de conducta",
+      "Análisis emocional",
+      "Vigilancia",
+      "Recomendaciones disciplinarias",
+      "Publicación automática"
+    ],
+    "accessibilityRequirements": [
+      "HTML semántico",
+      "Navegación con teclado",
+      "Foco visible",
+      "Contraste adecuado",
+      "Diseño responsive",
+      "Idioma del documento",
+      "Botones comprensibles",
+      "Textos alternativos",
+      "Información que no dependa únicamente del color",
+      "Mensajes de error claros"
+    ],
+    "offlineAlternativesRequired": true
+  },
+  "offlineAlternatives": [
+    {
+      "digitalActivity": "Consulta del recurso web",
+      "offlineAlternative": "Guía impresa"
+    },
+    {
+      "digitalActivity": "Uso de inteligencia artificial",
+      "offlineAlternative": "Simulación con roles y tarjetas"
+    },
+    {
+      "digitalActivity": "Creación de prompts",
+      "offlineAlternative": "Plantilla escrita"
+    },
+    {
+      "digitalActivity": "Prototipo digital",
+      "offlineAlternative": "Prototipo en papel"
+    },
+    {
+      "digitalActivity": "Formulario de retroalimentación",
+      "offlineAlternative": "Ficha anónima impresa"
+    },
+    {
+      "digitalActivity": "Campaña digital",
+      "offlineAlternative": "Afiches y galería física"
+    }
+  ],
+  "relatedDocuments": {
+    "projectOverview": "knowledge/00_PROJECT_OVERVIEW.md",
+    "context": "knowledge/01_CONTEXT.md",
+    "transferFromKorea": "knowledge/02_TRANSFER_FROM_KOREA.md",
+    "targetPopulation": "knowledge/03_TARGET_POPULATION.md",
+    "unit": {
+      "generalInformation": "knowledge/unit/01_GENERAL_INFORMATION.md",
+      "justification": "knowledge/unit/02_JUSTIFICATION.md",
+      "problemStatement": "knowledge/unit/03_PROBLEM_STATEMENT.md",
+      "purpose": "knowledge/unit/04_PURPOSE.md",
+      "learningObjectives": "knowledge/unit/05_LEARNING_OBJECTIVES.md",
+      "competencies": "knowledge/unit/06_COMPETENCIES.md",
+      "expectedLearning": "knowledge/unit/07_EXPECTED_LEARNING.md",
+      "transversalApproach": "knowledge/unit/08_TRANSVERSAL_APPROACH.md",
+      "interdisciplinarity": "knowledge/unit/09_INTERDISCIPLINARITY.md",
+      "timeline": "knowledge/unit/10_TIMELINE.md",
+      "resources": "knowledge/unit/11_RESOURCES.md",
+      "references": "knowledge/unit/12_REFERENCES.md"
+    },
+    "moments": {
+      "moment1": "knowledge/moments/MOMENT_1.md",
+      "moment2": "knowledge/moments/MOMENT_2.md",
+      "moment3": "knowledge/moments/MOMENT_3.md",
+      "moment4": "knowledge/moments/MOMENT_4.md"
+    },
+    "pedagogy": {
+      "assessment": "knowledge/pedagogy/ASSESSMENT.md",
+      "evidence": "knowledge/pedagogy/EVIDENCE.md",
+      "rubrics": "knowledge/pedagogy/RUBRICS.md",
+      "learningProducts": "knowledge/pedagogy/LEARNING_PRODUCTS.md"
+    },
+    "language": {
+      "glossary": "knowledge/language/GLOSSARY.md",
+      "keyExpressions": "knowledge/language/KEY_EXPRESSIONS.md",
+      "restorativeLanguage": "knowledge/language/RESTORATIVE_LANGUAGE.md",
+      "peaceMessages": "knowledge/language/PEACE_MESSAGES.md"
+    },
+    "prompts": {
+      "gemini": "knowledge/prompts/GEMINI.md",
+      "vibeCoding": "knowledge/prompts/VIBE_CODING.md"
+    }
+  }
+}
